@@ -9,7 +9,6 @@ const memegato = cats
 .filter(cat => cat.id === catskin)
 .map(cat => cat.meme);
 
-
 const frases= [
 {id:1,frase:'A curiosidade matou o gato!!! :O'},
 {id:2,frase: `CatSpirit tem ${cats.length} gatos, você consegue pegar todos??`},
