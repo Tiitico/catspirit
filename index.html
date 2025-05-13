@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatSpirit</title>
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/tutorial.css">
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+        @font-face {
+    font-family: 'Dogica';
+    src: url('./font/dogica/TTF/dogica.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogica.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dogica Bold';
+    src: url('./font/dogica/TTF/dogicabold.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicabold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('./font/dogica/TTF/dogicapixel.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicapixel.otf') format('opentype');
+}   
+
+@font-face {
+    font-family: 'Dogica Pixel Bold';
+    src: url('./font/dogica/TTF/dogicapixelbold.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicapixelbold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+        </style>
+
+    <style>
+        html{
+            font-size: 1.3em;
+            overflow: hidden; 
+            background-color: #000;
+            
+     }
+        *{margin: auto;
+            scrollbar-color: #ffffff50 #000; /* Define a cor do thumb e do track */
+            scrollbar-width: large; /* Tamanho da barra de rolagem */
+            scroll-behavior: smooth;
+            cursor:default;
+            font-family: 'Dogica', sans-serif;
+            text-rendering: geometricPrecision;
+            image-rendering: pixelated;
+            shape-rendering: geometricPrecision;
+        }
+        
+        div{
+            display: flex;         
+               justify-content: center;
+
+        }
+        #mainscreen{
+            background-color: rgb(62, 62, 104);
+            width: 1536px;
+    height: 728px;
+          top: 50%;
+  left: 50%;
+    position: absolute;
+    transform-origin: top left ;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="mainscreen"> 
+        <h1 id="tittle">CatSpirit</h1>  
+        <h5 id="class">gatos comuns:</h5>
+        <h4 id="name"></h4>
+        <div class="ui" id="config"><img src="./public/sources/objects/config.png" class="config"/></div>
+        <div class="ui" id="conquistas"><img src="./public/sources/objects/conquistas.png" alt="" class="rataodiouro"></div>
+        <div class="ui" id="instagram">
+            <a class="img" href="https://www.instagram.com/thiago.finatti/">
+                <img class='instagram'src="./public/sources/objects/instagram.png" alt="">
+            </a></div>
+        <div class="ui" id="doacoes"></div>
+        <div class="ui" id="infs"></div>
+        <div class="ui" id="estatisticas"></div>
+        <div class="buttons">
+            <h1 class="btn_skin" id="left_btn"  >></h1>
+            <div class="divskins" id="divskins">
+            </div>
+            <h1 class="btn_skin" id="right_btn"  >></h1>
+            </div>
+            <div id="description">
+                <p id="desctext"></p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <h2 class="ah2" id="ah2">jogar</h2>
+                    <h2 class="bh2" id="bh2">tutorial</h2>
+                </ul>
+            </div>
+            <div class="tutoscreen" id="tutoscreen">
+                <h1 class="esc" id="esc">×</h1>
+                <div id="navb">
+                    <h1 class="btstuto" id="btntt">></h1>
+                    <h1 id="nometela">controles</h1>
+                    <h1 class="btstuto" id="btntt2">></h1>
+                </div>
+                <div class="tutoinfs">
+                    <p class="tutodesctext"></p>
+                </div>
+    </div>
+            <div class="stimg" id="d1"></div>
+            <div class="stimg" id="d2"></div>
+            <div class="stimg" id="d3"></div>
+            <div class="stimg" id="d4"></div>
+</div>
+
+
+<script src="./scripts/mobile.js"></script>
+<script src="./scripts/menu.js"></script>
+<script src="./scripts/objects.js"></script>
+<script src="./scripts/cats.js"></script>
+<script src="./scripts/skins.js"></script>
+<script src="./scripts/tutorial.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+.obs{
+  height: 300%;  
+  position: absolute;
+  bottom: -104%;
+}
+.balists{
+    position: absolute;
+    bottom: -100%;
+    height: 300%;
+
+}
+.cat{
+    position: absolute;
+    bottom: -40%;
+    width: 110%;
+    left: -5%;
+}
+/*menu de pause*/
+.pause {
+    display: none;
+    background-color: rgba(23, 7, 139, 0.707);
+    width: 48em;
+    height: 140%;
+    position: absolute;
+    top: -4%;
+    left: 110%;
+    transform:rotate(20deg);
+}
+.pausemenu{
+    display: none;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    width: 40em;
+    height: 140%;
+    position: absolute;
+    top: -5em;
+    left: 110%;
+    transform:rotate(20deg);   
+}
+
+.tutoul{
+    transform: rotate(-20deg);
+    position: absolute;
+    left:  -6%;
+    top: 42%;       
+}
+
+h2{
+    margin-top: 32%;
+}
+#ah2{
+    position: absolute;
+    top: 0;
+    left: 140%;
+}
+#bh2{
+        position: absolute;
+    top:3em;
+left: 70%;
+}
+#ah2:hover{
+    cursor: pointer;
+    color: rgb(91, 151, 241);
+    }
+    #bh2:hover{
+        cursor: pointer;
+        color: rgb(91, 151, 241);
+        }
+        #ch2:hover{
+            cursor: pointer;
+
+            color: rgb(91, 151, 241);
+            }
+            #dh2:hover{
+                cursor: pointer;
+                color: rgb(91, 151, 241);
+                }
+
+#ch2{
+    position: absolute;
+    top: 6em;
+left: 0;
+}
+#dh2{
+    position: absolute;
+    top: 9em;
+left: -70%
+}
+ul{
+    text-decoration: none;
+}
+/*tela de gameover*/
+.gameoverscreen {
+    display: none;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
+    height: 0%;
+    width: 0%;
+    line-height: 240%;
+}
+
+.frase {
+    font-size: 200%;
+    opacity: 0%;
+    text-align: center;
+    display: block;
+    width: 60%;
+    height: 40%; 
+}
+
+.ulgameover {
+    width: 40%;
+    opacity: 0%;
+    display: block;
+    text-align: center;
+}
+
+.scenario{
+    display: none;
+    position: absolute;
+width: 540.5%;
+bottom: 0%;
+}
+#scenario2{
+    left:  100%;
+}
+#scenario1{
+    display: flex;
+}
+html{
+    background-color: rgb(0, 0, 0);
+}
+h6{
+    font-size: 40%;
+}
+.explosion{
+    position: absolute;
+    width: 160%;
+    bottom: -100%;
+
+}
+.stimg{
+    background-color: black;
+    transform: rotate(30deg);
+    width: 35%;
+    position: absolute;
+}
+    #d1{
+        height: 140%;
+        left: -8.3%;
+        top: -30%;
+    }
+    #d2{
+        height: 160%;
+        left: 25%;
+        top: -29.91%;
+    }
+    #d3{
+        height: 160%;
+        right:25% ;
+        bottom: -29.91%;
+    }
+    #d4{
+        height: 140%;
+        right: -8.3%;
+        bottom: -30%;
+    }
+  #bossimg{
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 0%;
+    bottom: 20%;
+    height: 100%;
+  }
+  .fundo{
+    position: absolute;
+    bottom: 45%;
+    left: 10%;
+    background-color: #3c2222;
+    height: 24%;
+    width: 84%;
+  }
+  #lifeboss{
+    transition: 200ms;
+    position: absolute;
+    left: 0;
+    background-color: #a91c1c;
+    height: 100%;
+    width: 0%;
+  }
+  .lifehud{
+    position: absolute;
+    height: 340%;
+    top: -130%;
+  }
+  .poweran{
+    border-radius: 400%;
+    position: absolute;
+    left: 0%;
+    bottom: -150%;
+    width: 100%;
+    height: 400%;
+}
+.powercat{
+    position: absolute;
+    height: 250%;
+    bottom: -80%;
+}
+.powercatboss{
+    position: absolute;
+    width: 150%;
+    bottom: 24%;
+    left: 10%;
+
+}

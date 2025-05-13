@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatSpirit</title>
+    <link rel="stylesheet" href="./styles/colision.css">
+    <link rel="stylesheet" href="./styles/objects.css">
+    <link rel="stylesheet" href="./styles/tutorial.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+        @font-face {
+    font-family: 'Dogica';
+    src: url('./font/dogica/TTF/dogica.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogica.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dogica Bold';
+    src: url('./font/dogica/TTF/dogicabold.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicabold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('./font/dogica/TTF/dogicapixel.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicapixel.otf') format('opentype');
+}   
+
+@font-face {
+    font-family: 'Dogica Pixel Bold';
+    src: url('./font/dogica/TTF/dogicapixelbold.ttf') format('truetype'),
+         url('./font/dogica/OTF/dogicapixelbold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+        </style>
+
+    <style>
+
+        body{
+            font-size: 2.3svh;
+            overflow: hidden; 
+        }
+        *{margin: auto;
+            
+             scrollbar-color: #ffffff50 #000; /* Define a cor do thumb e do track */
+            scrollbar-width: large; /* Tamanho da barra de rolagem */
+            scroll-behavior: smooth;
+            cursor:default;
+            font-family: 'Dogica', sans-serif;
+            text-rendering: auto;
+            image-rendering: pixelated;
+            shape-rendering: auto;
+            will-change: auto;
+        }
+        div{
+            display: flex;         
+               justify-content: center;
+
+
+        }
+        #mainscreen{
+            background-color: rgb(50, 147, 215);
+            width: 1536px;
+    height: 728px;
+    position: absolute;
+      top: 50%;
+  left: 50%;
+    transform-origin: top left ;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="mainscreen">   
+        <div class="scenarios" id="scenarios">
+            <img src="./public/sources/scenarios/beachcity.png" class="scenario"id='scenario1'>
+            <img src="./public/sources/scenarios/beachcity.png" class="scenario"id='scenario2'>
+        </div>
+        <div id="bosshud">
+            <div class="fundo">
+                <div id="lifeboss"></div>
+            </div>
+            <img src="./public/sources/objects/bosslife.png" class="lifehud">
+        </div>
+        <div class="statusbar" id="statusbar">
+            <div class="fish" id="fish"></div>
+            <div class="heart" id="heart"></div>
+        </div>
+                <div class="boss" id="boss">
+                    <img id="bossimg" src=''>
+                    <img id="power1" class="powercatboss">
+                </div>
+        <div class="catcolision" id="cat">
+            <img src="" alt="" class="cat">
+        </div>
+        <div class="obstacle" id="obstacle">
+            <img src="" class="obs" id="obs1">
+             <img id="power2" class="powercat">
+        </div>
+        <div class="obstacle" id="obstacle2">
+            <img src="" class="obs" id="obs2">
+                <img id="power3" class="powercat">
+        </div>
+        <div class="bonus" id="bonus"></div>
+        <div class="balist" id="balist1">
+            <img src="" alt="" class="balists" id="balistimg1">
+        </div>
+        <div class="balist" id="balist2">
+            <img src="" alt="" class="balists" id="balistimg2">
+        </div>
+
+        <div class="gameoverscreen" id="gameoverscreen">
+                <h1 class="frase" id="frase"></h3>
+                    <ul class="ulgameover">
+                    <h3 id="a2h2">jogar denovo</h3>
+                <h3 id="b2h2">tutorial</h3>
+                <h3 id="c2h2">inicio</h3> 
+            </ul>
+        </div>
+
+        <div class="pause" id="pause"></div>
+        <div class="pausemenu" id="pausemenu">
+        <ul class="tutoul">
+            <h2 id="ah2">continue</h2>
+            <h2 id="bh2">tutorial</h2>
+            <h2 id="ch2">resetar</h2> 
+            <h2 id="dh2">inicio</h2>
+        </ul>
+        </div>
+        
+        <div class="tutoscreen" id="tutoscreen">
+            <h1 class="esc" id="esc">×</h1>
+            <div id="navb">
+                <h1 class="btstuto" id="btntt">></h1>
+                <h1 id="nometela">controles</h1>
+                <h1 class="btstuto" id="btntt2">></h1>
+            </div>
+            <div class="tutoinfs">
+                <p class="tutodesctext"></p>
+            </div>
+</div>
+            <div class="stimg" id="d1"></div>
+            <div class="stimg" id="d2"></div>
+            <div class="stimg" id="d3"></div>
+            <div class="stimg" id="d4"></div>
+        </div>
+
+
+<script src="./scripts/mobile.js"></script>
+<script src="./scripts/objects.js"></script> 
+<script src="./scripts/pause.js"></script>
+<script src="./scripts/colision.js"></script>
+<script src="./scripts/movement.js"></script>
+<script src="./scripts/cats.js"></script>
+<script src="./scripts/gameover.js"></script> 
+<script src="./scripts/animations.js"></script>
+<script src="./scripts/skinobstacle.js"></script>
+<script src="./scripts/obstacles.js"></script> 
+<script src="./scripts/power&boss.js"></script>
+<script src="./scripts/tutorial.js"></script>
+<script src="./scripts/scenarios.js"></script>
+
+</body>
+</html>

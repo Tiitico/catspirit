@@ -1,0 +1,97 @@
+.tutoscreen{
+    transition: 1200ms;
+    color: #ffffff00;
+    background-color: #000000;
+    position: absolute;
+    display: none;
+    bottom: 10%;
+    height: 0;
+    width: 0;
+}
+.tutodiv{
+    display: flex;
+    width: 90%;
+    height: auto;
+}
+.esc{
+    text-shadow: none;
+    padding: 0.3em;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 4em;
+}
+.esc:hover{
+    transition: 400ms;
+    color: rgb(255, 31, 87);}
+#btntt{
+    text-shadow: none;
+    left:0;
+    position: absolute;
+    padding: 0.2em;
+    transform: scaleX(-1);
+    font-size: 4.4em;
+}
+#btntt:hover{
+    transition: 400ms;
+    color: rgb(31, 121, 255);}
+#btntt2{
+    text-shadow: none;
+    right: 0;
+    padding: 0.2em;
+    position: absolute;
+    font-size: 4.4em;
+    
+}
+#btntt2:hover{
+    transition: 400ms;
+    color: rgb(31, 121, 255);}
+#nometela{
+    text-shadow: none;
+    font-size: 2em;}
+#navb{
+    top: 5% ;
+    position: absolute;
+    height: 16%;
+    width: 80%}
+
+.tutoinfs{
+    margin-bottom: 3%;
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    position: absolute;
+    bottom: 2%;
+    overflow-y: auto; 
+        overflow-x: hidden;
+    padding: 2% 1%; 
+    box-sizing: border-box;
+    font-size: 1.1em;
+    line-height: 1.24em;
+}
+
+.tutodesctext{
+    margin: 0%;
+    text-shadow: none;
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}   
+
+.tutoimg{
+    text-align: center;
+    margin-right: 4%;
+    height: auto;
+    width:  24%;
+}
+
+.tutocelestial{
+    text-align: center;
+    margin-right: 4%;
+    height: auto;
+    width:  12%;
+}
