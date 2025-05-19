@@ -17,7 +17,7 @@ const frases= [
 {id:5,frase: `Seja gentil com os gatos...<br><br>A Criação consegue ver você.`},
 {id:6,frase: `Experimente apertar as teclas R G B simultaneamente no menu principal.`},
 {id:7,frase: `CatSpirit foi desenvolvido em JS(javascript)<br><br>seria isso alguma dica secreta?`},
-{id:8, frase:`Atiraram o pau no gato-to mas o gato-to não morreu...<br><br> mentira morreu sim.<br><br><h6>não seja igual dona chica, atirar coisas em animais não é adimiravel!!!!</h6><br>`},
+{id:8, frase:`Atiraram o pau no gato-to mas o gato-to não morreu...<br><br> mentira morreu sim.<br><br><h6>não seja igual dona chica, atirar coisas em animais não é admiravel!!!!</h6><br>`},
 {id:9, frase: `Se você clicar varias vezes pra agachar, seu gato vai andar rapidinho<br><br><h5>definitivamente isso não é um bug que eu achei engraçado..</h5>`},
 {id:10, frase: `Aperte Enter para pausar!!!<br><br><h5>enquanto o gato estiver vivo é claro.</h5>`},
 {id:11, frase: `Não tenha medo de usar os seus poderes felinos, eles tão no jogo pra te ajudar<br><br><h5>aperte Z.</h5>`},
@@ -25,7 +25,8 @@ const frases= [
 {id:13, frase: `Se você ver um carro virando uma nave alienigena, ou algo parecido, fuja!<br><br> a corrupção está atrás de ti.`},
 {id:14, frase: `O fogo verde que sai dos foguetes do jogo possuem essa coloração pois esses misseis usam hidretos de boro!! esse metal quando em combustão tem uma coloração verde ao invés de laranja.`},
 {id:15, frase: `${memegato}`},
-{id:16, frase: `um passarinho roxo me disse q as pedras celestiais nada mais são do que bolas de pelo dos 3 gatos celestes.`}
+{id:16, frase: `um passarinho roxo me disse q as pedras celestiais nada mais são do que bolas de pelo dos 3 gatos celestes.`},
+{id:17, frase: `para evitar que você morra eu recomendo que:<br><br> miau miau miau!!!`}
 
 ];
 const frasechoice =  parseInt(Math.random() * frases.length) + 1;

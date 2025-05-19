@@ -12,4 +12,3 @@ function escalarContainer() {
   requestAnimationFrame(escalarContainer);
 }
 
-escalarContainer();

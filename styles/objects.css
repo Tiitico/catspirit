@@ -1,5 +1,4 @@
 .obs{
-  height: 300%;  
   position: absolute;
   bottom: -104%;
 }
@@ -7,6 +6,7 @@
     position: absolute;
     bottom: -100%;
     height: 300%;
+
 
 }
 .cat{
@@ -222,3 +222,4 @@ h6{
     left: 10%;
 
 }
+

@@ -5,6 +5,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 2, name: 'aeronave vermelha', 
@@ -13,6 +14,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 3, name: 'aeronave verde', 
@@ -21,6 +23,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 4, name: 'aeronave ciano', 
@@ -29,6 +32,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 5, name: 'aeronave rosa', 
@@ -37,6 +41,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
         {id: 6, name: 'missil', 
@@ -47,6 +52,7 @@ const obsskin = [
         colisionheigth:8,
         colisionwidth:10.4,
         heigth: 300,
+        width: 110,
         bottom: -104
     },
     {id: 7, name: 'aeronave rgb', 
@@ -59,6 +65,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 8, name: 'fusca azul', 
@@ -67,6 +74,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 9, name: 'fusca amarelo', 
@@ -75,6 +83,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 10, name: 'fusca vermelho', 
@@ -83,6 +92,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
     {id: 11, name: 'fusca verde', 
@@ -91,6 +101,7 @@ const obsskin = [
         colisionheigth:10,
         colisionwidth:8,
         heigth: 260,
+        width: 150,
         bottom: -84
     },
 ]
@@ -134,8 +145,10 @@ else {
 }
 
 obs1.style.height = `${obj.heigth}%`
+obs1.style.width = `${obj.width}%`
 obs1.style.bottom = `${obj.bottom}%`
 obs2.style.height = `${obj.heigth}%`
+obs2.style.width = `${obj.width}%`
 obs2.style.bottom = `${obj.bottom}%`
 obstacle.style.height = `${obj.colisionheigth}%`
 obstacle.style.width = `${obj.colisionwidth}%`
