@@ -15,32 +15,32 @@
 }
 .esc{
     text-shadow: none;
-    padding: 0.3em;
+    padding: 3%;
     position: absolute;
     top: 0%;
     right: 0%;
-    font-size: 4em;
+    font-size: 4vw;
 }
 .esc:hover{
     transition: 400ms;
     color: rgb(255, 31, 87);}
 #btntt{
     text-shadow: none;
-    left:0;
+    left:10%;
     position: absolute;
-    padding: 0.2em;
+    padding: 1%;
     transform: scaleX(-1);
-    font-size: 4.4em;
+    font-size: 6vw;
 }
 #btntt:hover{
     transition: 400ms;
     color: rgb(31, 121, 255);}
 #btntt2{
     text-shadow: none;
-    right: 0;
-    padding: 0.2em;
+    right: 10%;
+    padding: 1%;
     position: absolute;
-    font-size: 4.4em;
+    font-size: 6vw;
     
 }
 #btntt2:hover{
@@ -48,7 +48,7 @@
     color: rgb(31, 121, 255);}
 #nometela{
     text-shadow: none;
-    font-size: 2em;}
+    font-size: 2.4vw;}
 #navb{
     top: 5% ;
     position: absolute;
@@ -68,8 +68,8 @@
         overflow-x: hidden;
     padding: 2% 1%; 
     box-sizing: border-box;
-    font-size: 1.1em;
-    line-height: 1.24em;
+    font-size: 1.4vw;
+    line-height: 3.2vh;
 }
 
 .tutodesctext{
