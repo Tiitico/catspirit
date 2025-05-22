@@ -1,3 +1,23 @@
+(function () {
+  const originalRAF = window.requestAnimationFrame;
+  const FRAME_DURATION = 1000 / 120; 
+  const lastTimes = new WeakMap();
+
+  window.requestAnimationFrame = function (callback) {
+    function rafHandler(timestamp) {
+      const lastTime = lastTimes.get(callback) || 0;
+      if (timestamp - lastTime >= FRAME_DURATION) {
+        lastTimes.set(callback, timestamp);
+        callback(timestamp);
+      } else {
+        originalRAF(rafHandler);
+      }
+    }
+    return originalRAF(rafHandler);
+  };
+})();
+
+// ...existing code...
 const BASE_WIDTH = 1536;
 const BASE_HEIGHT = 728;
 
