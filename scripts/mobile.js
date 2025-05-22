@@ -1,6 +1,6 @@
 (function () {
   const originalRAF = window.requestAnimationFrame;
-  const FRAME_DURATION = 1000 / 120; 
+  const FRAME_DURATION = 1000 / 60; 
   const lastTimes = new WeakMap();
 
   window.requestAnimationFrame = function (callback) {
