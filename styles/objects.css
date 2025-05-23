@@ -19,7 +19,7 @@
 .pause {
     display: none;
     background-color: rgba(23, 7, 139, 0.707);
-    width: 48vw;
+    width: 48%;
     height: 140%;
     position: absolute;
     top: -4%;
@@ -30,7 +30,7 @@
     display: none;
     color: #fff;
     background-color: rgb(0, 0, 0);
-    width: 40vw;
+    width: 40%;
     height: 140%;
     position: absolute;
     top: -5em;
@@ -51,12 +51,12 @@ h2{
 #ah2{
     position: absolute;
     top: 0;
-    left: 4vw;
+    left: 140%;
 }
 #bh2{
         position: absolute;
-    top:10vh;
-left: 2vw;
+    top:3em;
+left: 70%;
 }
 #ah2:hover{
     cursor: pointer;
@@ -78,13 +78,13 @@ left: 2vw;
 
 #ch2{
     position: absolute;
-    top: 20vh;
+    top: 6em;
 left: 0;
 }
 #dh2{
     position: absolute;
-    top: 30vh;
-left: -2vw
+    top: 9em;
+left: -70%;
 }
 ul{
     text-decoration: none;

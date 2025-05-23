@@ -1,4 +1,3 @@
-const mainscreen = document.querySelector('#mainscreen');
 const cat = document.querySelector('#cat');
 const obs1 = document.querySelector('#obs1')
 const obs2 = document.querySelector('#obs2')
