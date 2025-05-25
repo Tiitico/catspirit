@@ -102,8 +102,8 @@ function statsupdate() {
                  <h1 class="stats" id="heartcounter">×${lifestats}</h1> 
     </div>
     <div class='score'>
-    <p>score: ${score}</p>
-    <p>best score: ${bestscore}</p>
+    <p id="sc1">score: ${score}</p>
+    <p id="sc2">best score: ${bestscore}</p>
     </div>
     `
     }

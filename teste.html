@@ -48,7 +48,6 @@
             overflow: hidden; 
         }
         *{margin: auto;
-            
              scrollbar-color: #ffffff50 #000; /* Define a cor do thumb e do track */
             scrollbar-width: large; /* Tamanho da barra de rolagem */
             scroll-behavior: smooth;
@@ -62,8 +61,6 @@
         div{
             display: flex;         
                justify-content: center;
-
-
         }
         #mainscreen{
             background-color: rgb(50, 147, 215);
@@ -117,22 +114,18 @@
         </div>
 
         <div class="gameoverscreen" id="gameoverscreen">
-                <h1 class="frase" id="frase"></h3>
-                    <ul class="ulgameover">
-                    <h3 id="a2h2">jogar denovo</h3>
-                <h3 id="b2h2">tutorial</h3>
-                <h3 id="c2h2">inicio</h3> 
-            </ul>
+                <h1 class="frase" id="frase"></h1> 
+                <h3 id="a2h2">jogar denovo</h3>    
+                <h3 id="b2h2">tutorial</h3>        
+                <h3 id="c2h2">inicio</h3>          
         </div>
 
         <div class="pause" id="pause"></div>
         <div class="pausemenu" id="pausemenu">
-        <ul class="tutoul">
             <h2 id="ah2">continue</h2>
             <h2 id="bh2">tutorial</h2>
             <h2 id="ch2">resetar</h2> 
             <h2 id="dh2">inicio</h2>
-        </ul>
         </div>
         
         <div class="tutoscreen" id="tutoscreen">
@@ -151,9 +144,12 @@
             <div class="stimg" id="d3"></div>
             <div class="stimg" id="d4"></div>
         </div>
+        <div class="censorship" id="stripe1"></div>
+        <div class="censorship" id="stripe2"></div>
+        <div class="censorship" id="stripe3"></div>
+        <div class="censorship" id="stripe4"></div>
 
 
-<script src="./scripts/mobile.js"></script>
 <script src="./scripts/objects.js"></script> 
 <script src="./scripts/pause.js"></script>
 <script src="./scripts/colision.js"></script>
@@ -166,6 +162,8 @@
 <script src="./scripts/power&boss.js"></script>
 <script src="./scripts/tutorial.js"></script>
 <script src="./scripts/scenarios.js"></script>
+<script src="./scripts/mobile.js"></script>
+
 
 </body>
 </html>

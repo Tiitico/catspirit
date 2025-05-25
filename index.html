@@ -47,14 +47,15 @@
             
      }
         *{margin: auto;
-            scrollbar-color: #ffffff50 #000; /* Define a cor do thumb e do track */
+             scrollbar-color: #ffffff50 #000; /* Define a cor do thumb e do track */
             scrollbar-width: large; /* Tamanho da barra de rolagem */
             scroll-behavior: smooth;
             cursor:default;
             font-family: 'Dogica', sans-serif;
-            text-rendering: geometricPrecision;
+            text-rendering: auto;
             image-rendering: pixelated;
-            shape-rendering: geometricPrecision;
+            shape-rendering: auto;
+            will-change: auto;
         }
         
         div{
@@ -64,7 +65,10 @@
         }
         #mainscreen{
             background-color: rgb(62, 62, 104);
-    position: absolute;
+                width: 100svw;
+    height: 100svh;
+    
+            position: absolute;
     transform-origin: top left ;
     
         }
@@ -95,7 +99,7 @@
                 <p id="desctext"></p>
             </div>
             <div class="menu">
-                <ul>
+                <ul id="ulmenu">
                     <h2 class="ah2" id="ah2">jogar</h2>
                     <h2 class="bh2" id="bh2">tutorial</h2>
                 </ul>
@@ -116,14 +120,17 @@
             <div class="stimg" id="d3"></div>
             <div class="stimg" id="d4"></div>
 </div>
+        <div class="censorship" id="stripe1"></div>
+        <div class="censorship" id="stripe2"></div>
+        <div class="censorship" id="stripe3"></div>
+        <div class="censorship" id="stripe4"></div>
 
-
-<script src="./scripts/mobile.js"></script>
 <script src="./scripts/menu.js"></script>
 <script src="./scripts/objects.js"></script>
 <script src="./scripts/cats.js"></script>
 <script src="./scripts/skins.js"></script>
 <script src="./scripts/tutorial.js"></script>
+<script src="./scripts/mobilemenu.js"></script>
 
 </body>
 </html>

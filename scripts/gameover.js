@@ -1,6 +1,5 @@
 const gameoverscreen = document.querySelector('#gameoverscreen');
-const frase =document.querySelector('#frase')
-const ulgameover = document.querySelector('.ulgameover')
+const frase =document.querySelector('#frase');
 let gameoverchoice = 1;
 const nomegato = cats
 .filter(cat => cat.id === catskin)
@@ -42,7 +41,6 @@ gameoverscreen.style.height= '100%'
 setTimeout(() => {
     gameoverscreen.style.width= '100%'
     setTimeout(()=>{
-            ulgameover.style.opacity = '100%'
     frase.style.opacity = '100%'
     },100)
 

@@ -1,9 +1,5 @@
 const pausedetail = document.querySelector('#pause');
 const pausemenu = document.querySelector('#pausemenu')
-const ah2 = document.querySelector('#ah2')
-const bh2 = document.querySelector('#bh2')
-const ch2 = document.querySelector('#ch2')
-const dh2 = document.querySelector('#dh2')
 
 function pauseanimationON() {
     if (pause === true) {
