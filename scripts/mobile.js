@@ -19,84 +19,84 @@ let widthpercent = mainscreen.offsetWidth
 let calcwidth = (((widthpercent / window.innerWidth) * 100)-100)/-2;
 let calcheight = (((heightpercent / window.innerHeight) * 100)-100)/-2;
 
-mainscreen.style.top = `${calcheight}%`;
-mainscreen.style.left = `${calcwidth}%`;
-stripe1.style.height = `${calcheight}%`;
-stripe2.style.height = `${calcheight}%`;
+mainscreen.style.top = `${calcheight}svh`;
+mainscreen.style.left = `${calcwidth}svw`;
+stripe1.style.height = `${calcheight}svh`;
+stripe2.style.height = `${calcheight}svh`;
 
-stripe3.style.width = `${calcwidth}%`
-stripe4.style.width = `${calcwidth}%`
+stripe3.style.width = `${calcwidth}svw`
+stripe4.style.width = `${calcwidth}svw`
 
 if (height > winHeight) {
     height = winHeight;
     width = height * BASE_RATIO;
 
-frase.style.fontSize = '5.07vh';
-frase.style.lineHeight = '6.75vh';
+frase.style.fontSize = '5.07svh';
+frase.style.lineHeight = '6.75svh';
 
-a2h2.style.fontSize = '2.64vh';
-b2h2.style.fontSize = '2.64vh';
-c2h2.style.fontSize = '2.64vh';
+a2h2.style.fontSize = '2.64svh';
+b2h2.style.fontSize = '2.64svh';
+c2h2.style.fontSize = '2.64svh';
 
-ah2.style.fontSize = '3.38vh';
-bh2.style.fontSize = '3.38vh';
-ch2.style.fontSize = '3.38vh';
-dh2.style.fontSize = '3.38vh';
+ah2.style.fontSize = '3.38svh';
+bh2.style.fontSize = '3.38svh';
+ch2.style.fontSize = '3.38svh';
+dh2.style.fontSize = '3.38svh';
 
-a2h2.style.bottom = '21.1vh';
-b2h2.style.bottom = '14.8vh';
-c2h2.style.bottom = '8.4vh';
+a2h2.style.bottom = '21.1svh';
+b2h2.style.bottom = '14.8svh';
+c2h2.style.bottom = '8.4svh';
 
-a2h2.style.height = '6.3vh';
-b2h2.style.height = '6.3vh';
-c2h2.style.height= '6.3vh';
+a2h2.style.height = '6.3svh';
+b2h2.style.height = '6.3svh';
+c2h2.style.height= '6.3svh';
 
-ah2.style.top = '21.1vh';
-bh2.style.top = '31.6vh';
-ch2.style.top = '42.2vh';
-dh2.style.top = '52.7vh';
+ah2.style.top = '21.1svh';
+bh2.style.top = '31.6svh';
+ch2.style.top = '42.2svh';
+dh2.style.top = '52.7svh';
 
-fishcounter.style.fontSize = `6.33vh`;
-heartcounter.style.fontSize = `6.33vh`;
+fishcounter.style.fontSize = `6.33svh`;
+heartcounter.style.fontSize = `6.33svh`;
 
-sc1.style.fontSize = `2.64vh`;
-sc2.style.fontSize = `2.64vh`;
+sc1.style.fontSize = `2.64svh`;
+sc2.style.fontSize = `2.64svh`;
 
 
 }else{
    width = winWidth;
    height = width / BASE_RATIO;
 
-    frase.style.fontSize = '2.4vw';
-frase.style.lineHeight = '3.2vw';
+    frase.style.fontSize = '2.4svw';
+frase.style.lineHeight = '3.2svw';
 
-a2h2.style.fontSize = '1.2vw';
-b2h2.style.fontSize = '1.2vw';
-c2h2.style.fontSize = '1.2vw';
+a2h2.style.fontSize = '1.2svw';
+b2h2.style.fontSize = '1.2svw';
+c2h2.style.fontSize = '1.2svw';
 
-ah2.style.fontSize = '1.6vw';
-bh2.style.fontSize = '1.6vw';
-ch2.style.fontSize = '1.6vw';
-dh2.style.fontSize = '1.6vw';
+ah2.style.fontSize = '1.6svw';
+bh2.style.fontSize = '1.6svw';
+ch2.style.fontSize = '1.6svw';
+dh2.style.fontSize = '1.6svw';
 
-a2h2.style.bottom = '10vw';
-b2h2.style.bottom = '7vw';
-c2h2.style.bottom = '4vw';
+a2h2.style.bottom = '10svw';
+b2h2.style.bottom = '7svw';
+c2h2.style.bottom = '4svw';
 
-a2h2.style.height = '3vw';
-b2h2.style.height = '3vw';
-c2h2.style.height= '3vw';
+a2h2.style.height = '3svw';
+b2h2.style.height = '3svw';
+c2h2.style.height= '3svw';
 
-ah2.style.top = '10vw';
-bh2.style.top = '15vw';
-ch2.style.top = '20vw';
-dh2.style.top = '25vw';
+ah2.style.top = '10svw';
+bh2.style.top = '15svw';
+ch2.style.top = '20svw';
+dh2.style.top = '25svw';
 
-fishcounter.style.fontSize = `3vw`;
-heartcounter.style.fontSize = `3vw`;
+fishcounter.style.fontSize = `3svw`;
+heartcounter.style.fontSize = `3svw`;
 
-sc1.style.fontSize = `1.2vw`;
-sc2.style.fontSize = `1.2vw`;
+sc1.style.fontSize = `1.2svw`;
+sc2.style.fontSize = `1.2svw`;
 
 
   }

@@ -21,42 +21,42 @@ let widthpercent = mainscreen.offsetWidth
 let calcwidth = (((widthpercent / window.innerWidth) * 100)-100)/-2;
 let calcheight = (((heightpercent / window.innerHeight) * 100)-100)/-2;
 
-mainscreen.style.top = `${calcheight}%`;
-mainscreen.style.left = `${calcwidth}%`;
-stripe1.style.height = `${calcheight}%`;
-stripe2.style.height = `${calcheight}%`;
+mainscreen.style.top = `${calcheight}svh`;
+mainscreen.style.left = `${calcwidth}svw`;
+stripe1.style.height = `${calcheight}svh`;
+stripe2.style.height = `${calcheight}svh`;
 
-stripe3.style.width = `${calcwidth}%`
-stripe4.style.width = `${calcwidth}%`
+stripe3.style.width = `${calcwidth}svw`
+stripe4.style.width = `${calcwidth}svw`
 
 if (height > winHeight) {
     height = winHeight;
     width = height * BASE_RATIO;
 
-    description.style.fontSize ='2.96vh';
-    skinleftbtn.style.fontSize = '21.1vh';
-    skinrighttbtn.style.fontSize = '21.1vh';
-    tittle.style.fontSize = '4.4vh';
-    classcat.style.fontSize = '2.1vh';
-    namemenu.style.fontSize='2.96vh';
-    ah2.style.fontSize = '2.96vh';
-    bh2.style.fontSize = '2.96vh';
-    ulmenu.style.fontSize = '2.96vh';
+    description.style.fontSize ='2.96svh';
+    skinleftbtn.style.fontSize = '21.1svh';
+    skinrighttbtn.style.fontSize = '21.1svh';
+    tittle.style.fontSize = '4.4svh';
+    classcat.style.fontSize = '2.1svh';
+    namemenu.style.fontSize='2.96svh';
+    ah2.style.fontSize = '2.96svh';
+    bh2.style.fontSize = '2.96svh';
+    ulmenu.style.fontSize = '2.96svh';
   
 }
   else{
     width = winWidth;
     height = width / BASE_RATIO;
 
-    description.style.fontSize ='1.4vw';
-    skinleftbtn.style.fontSize = '10vw';
-    skinrighttbtn.style.fontSize = '10vw';
-    tittle.style.fontSize = '2.1vw';
-    classcat.style.fontSize = '1vw';
-    namemenu.style.fontSize='1.4vw';
-    ah2.style.fontSize = '1.4vw';
-    bh2.style.fontSize = '1.4vw';
-    ulmenu.style.fontSize = '1.4vw';
+    description.style.fontSize ='1.4svw';
+    skinleftbtn.style.fontSize = '10svw';
+    skinrighttbtn.style.fontSize = '10svw';
+    tittle.style.fontSize = '2.1svw';
+    classcat.style.fontSize = '1svw';
+    namemenu.style.fontSize='1.4svw';
+    ah2.style.fontSize = '1.4svw';
+    bh2.style.fontSize = '1.4svw';
+    ulmenu.style.fontSize = '1.4svw';
 
 
   }

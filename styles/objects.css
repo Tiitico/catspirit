@@ -108,12 +108,14 @@ ul{
 
 .frase {
     position: absolute;
-    top: 12%;
+    top: 8%;
     opacity: 0%;
     text-align: center;
     display: block;
     width: 60%;
-    height: 40%; 
+    height: 60%; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #a2h2,#b2h2,#c2h2{
