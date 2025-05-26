@@ -46,3 +46,13 @@ setTimeout(()=>{
     pause = false
 },500)
     }
+
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === 'hidden') {
+    if(pause === false && lifestats>0){
+    pause = true
+    pauseanimationON()
+}
+    console.log("Usuário saiu da aba ou minimizou");
+  }
+});

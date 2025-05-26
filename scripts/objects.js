@@ -17,7 +17,7 @@ function calculateFPS(now) {
     fps = (frameCount / delta) * 100;
     /*console.log(`FPS: ${Math.round(fps)}`);*/
     fpsadjust = parseFloat((fpsbase/fps).toFixed(10));
-    moving = fpsadjust*movctrl
+    moving = parseFloat((fpsadjust*movctrl).toFixed(3))
     frameCount = 0;
     lastFrameTime = now;
   }

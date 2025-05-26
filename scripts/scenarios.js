@@ -10,7 +10,7 @@ function scenario1moving() {
     scenario1.style.display = 'flex'
     scenario1started = true
 if (lifestats>0) {
-    scenariomv = moving*0.8
+    scenariomv = movctrl*0.8
 }else{
     scenariomv *=0.96
 }
