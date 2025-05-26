@@ -107,8 +107,8 @@ function bonuschoice(){
 
                 } else if (bonuschoce>75 && bonuschoce <= 105 ) {
                     score +=75 //1 raçao
-                    if (moving<2.4){
-                        moving +=0.1
+                    if (movctrl<2.4){
+                        movctrl +=0.1
                         timer -= 0.5
                     }
 
@@ -130,8 +130,8 @@ function bonuschoice(){
 
                 } else if (bonuschoce>180 && bonuschoce <= 205) {
                     score +=250 //3 rações
-                    if (moving<2.4){
-                        moving +=0.1
+                    if (movctrl<2.4){
+                        movctrl +=0.1
                         timer -= 0.5
                     }
 
@@ -149,11 +149,11 @@ function bonuschoice(){
                     }
 
                 }else if (bonuschoce>230 && bonuschoce <= 245) {
-                    moving -= 0.5;  //relogio
+                    movctrl -= 0.5;  //relogio
                     timer += 2.5;
 
-                    if (moving<1.1) {
-                        moving = 1.1
+                    if (movctrl<1.1) {
+                        movctrl = 1.1
                         timer = 11
                     } 
 
@@ -556,15 +556,15 @@ function bossoff(){
     }
 }
 function ultraacelerate(){
-    if (moving<2){
-        moving +=0.1
+    if (movctrl<2){
+        movctrl +=0.1
         time -=0.5
         accontroll = 20000
         setTimeout(()=>{
             requestAnimationFrame(ultraacelerate)
         },1000)
     }else{
-        moving= 2
+        movctrl= 2
 
     }
 }

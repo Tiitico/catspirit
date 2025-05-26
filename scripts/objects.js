@@ -1,3 +1,30 @@
+let lastFrameTime = performance.now();
+let frameCount = 0;
+let fps = 6;
+let fpsbase = 6;
+let fpsadjust = fpsbase/fps;
+
+let movctrl = 0.9
+let moving = fpsadjust*movctrl;
+
+function calculateFPS(now) {
+  frameCount++;
+
+  const delta = now - lastFrameTime;
+
+  // Atualiza o FPS a cada segundo
+  if (delta >= 100) {
+    fps = (frameCount / delta) * 100;
+    console.log(`FPS: ${Math.round(fps)}`);
+    fpsadjust = parseFloat((fpsbase/fps).toFixed(10));
+    moving = fpsadjust*movctrl
+    frameCount = 0;
+    lastFrameTime = now;
+  }
+  requestAnimationFrame(calculateFPS);
+}
+requestAnimationFrame(calculateFPS)
+
 const cat = document.querySelector('#cat');
 const obs1 = document.querySelector('#obs1')
 const obs2 = document.querySelector('#obs2')
@@ -21,7 +48,7 @@ let multperm = 1;
 let multtemp = 1;
 let gravity = true
 let imortality = false;
-let moving = 0.9;
+
 let vgravity = moving*0.8;
 let bossstats = false;
 let bosslifestats = 10
@@ -54,3 +81,4 @@ let bestscore = localStorage.getItem("bestscore") ? parseInt(localStorage.getIte
 function startgame(){
     window.location.href = `teste.html`;
     }
+

@@ -10,8 +10,8 @@ if (accontroll> 0) {
     requestAnimationFrame(aceleration)
 }else{
 
-        if (moving <2 ) {
-            moving+=0.1
+        if (movctrl <2 ) {
+            movctrl+=0.1
 timer -=0.5
 accontroll = 8000
 requestAnimationFrame(aceleration)
