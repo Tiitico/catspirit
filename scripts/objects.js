@@ -15,7 +15,7 @@ function calculateFPS(now) {
   // Atualiza o FPS a cada segundo
   if (delta >= 100) {
     fps = (frameCount / delta) * 100;
-    console.log(`FPS: ${Math.round(fps)}`);
+    /*console.log(`FPS: ${Math.round(fps)}`);*/
     fpsadjust = parseFloat((fpsbase/fps).toFixed(10));
     moving = fpsadjust*movctrl
     frameCount = 0;

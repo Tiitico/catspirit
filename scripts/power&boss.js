@@ -74,7 +74,7 @@ function bonusmoving() {
     bonus.style.display = 'flex'
         if (bx > 0 && colisionbonus === false && lifestats>0) {
             if (pause === false) {
-                    bx -= moving-0.5;
+                    bx -= moving*0.5;
                     bonuscolision();
                     if (bx <= 100 && bx >= 90) {
                         bonusskins()
