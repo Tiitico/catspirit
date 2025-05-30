@@ -45,7 +45,7 @@ document.addEventListener('keydown', (event) => {
             vgravity = moving*0.8
             if (y>6.8){
                 catstats = 2
-                y-= 4
+                y-= 4*fpsadjust
           cat.style.bottom = `${y}%`
           requestAnimationFrame(squat)
             }else{
@@ -58,12 +58,12 @@ document.addEventListener('keydown', (event) => {
     function jump(){
         if(lifestats>0 && squatt === false){
             if (pause === false) {
-                fallcontrol-= timer/2
+                fallcontrol-= (timer/2)*fpsadjust
                 if (y < 36) {
                     rotate = 2
                     catstats = 2
                     vgravity *= 0.97 // Diminui gradualmente para simular perda de força ao subir
-                    y += 2.2 * vgravity
+                    y += (2.2 * vgravity)*fpsadjust
                     cat.style.bottom = `${y}%`
                     requestAnimationFrame(jump)
                 } else {
@@ -85,7 +85,7 @@ document.addEventListener('keydown', (event) => {
                 if (y > 6.8) {
                     rotate = 1
                     vgravity *= 1.01// Aumenta gradualmente para simular aceleração da queda
-                    y -= 2 * vgravity
+                    y -= (2 * vgravity)*fpsadjust
                     if (lifestats>0) {
                         cat.style.bottom = `${y}%`
                     }

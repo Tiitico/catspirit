@@ -107,3 +107,64 @@ sc2.style.fontSize = `1.2svw`;
   requestAnimationFrame(scaleadjust);
 }
 scaleadjust();
+    let controleAtivo = false;
+
+const nomesDosBotoes = {
+  0: "A / X",
+  1: "B / O",
+  2: "X / Quadrado",
+  3: "Y / Triângulo",
+  4: "L1",
+  5: "R1",
+  6: "L2 (analógico)",
+  7: "R2 (analógico)",
+  8: "Select / Back",
+  9: "Start",
+  10: "L3",
+  11: "R3",
+  12: "D-Pad ↑",
+  13: "D-Pad ↓",
+  14: "D-Pad ←",
+  15: "D-Pad →",
+  16: "Botão central",
+};
+
+    window.addEventListener("gamepadconnected", () => {
+      console.log("Controle conectado!");
+      controleConectado = true;
+controlgamepad()
+    });
+      window.addEventListener("gamepaddisconnected", () => {
+    console.log("Controle desconectado.");
+    controleAtivo = false;
+  });
+
+  function controlgamepad() {
+                const gamepad = navigator.getGamepads()[0];
+      if (gamepad && gamepad.buttons[0].pressed || gamepad && gamepad.buttons[1].pressed || gamepad && gamepad.buttons[2].pressed || gamepad && gamepad.buttons[3].pressed ) {
+      if (powerr=== false) {
+        power()
+      }
+      }
+      const gpy = gamepad.axes[1];
+      if (gamepad && Math.abs(gpy) > 0.1) {
+       if (catstats === 1) {
+        cat.style.height = '10%'
+            if (y<=6.8 || gravity === false ) {
+                squatt =false
+              requestAnimationFrame(jump)  
+        }
+       }
+      }
+            if (gamepad && Math.abs(gpy) < -0.1) {
+        squatt= true;
+            requestAnimationFrame(squat)
+            requestAnimationFrame(squattanimation)
+      }else{
+                    cat.style.height= '10%';
+            squatt= false;
+      }
+      if (controleConectado === true) {
+        requestAnimationFrame(controlgamepad)
+      }
+  }
