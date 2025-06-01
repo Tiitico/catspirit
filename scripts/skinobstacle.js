@@ -144,12 +144,10 @@ else {
     sprite = obj.sprite1;
 }
 
-obs1.style.height = `${obj.heigth}%`
-obs1.style.width = `${obj.width}%`
-obs1.style.bottom = `${obj.bottom}%`
-obs2.style.height = `${obj.heigth}%`
-obs2.style.width = `${obj.width}%`
-obs2.style.bottom = `${obj.bottom}%`
+obss.forEach(el=>el.style.height = `${obj.heigth}%`)
+obss.forEach(el=>el.style.width = `${obj.width}%`)
+obss.forEach(el=>el.style.bottom = `${obj.bottom}%`)
+
 obstacle.style.height = `${obj.colisionheigth}%`
 obstacle.style.width = `${obj.colisionwidth}%`
 obstacle2.style.height = `${obj.colisionheigth}%`
@@ -157,8 +155,7 @@ obstacle2.style.width = `${obj.colisionwidth}%`
 
 const preloadImg = new Image();
       preloadImg.onload = () => {
-        obs1.src = sprite;
-        obs2.src = sprite;
+obss.forEach(el=>el.src = sprite)
     };
       preloadImg.src = sprite;
 
@@ -175,12 +172,9 @@ function rotations(){
         boss.style.transform = `rotate(${rotateboss}deg)`
 boss.style.top = `${rotatevalue*0.8+30}%`
         if (obj.rotate) {
-        obs1.style.transform = `rotate(${rotatevalue}deg)`;
-        obs2.style.transform = `rotate(${rotatevalue}deg)`;
+        obss.forEach(el=>el.style.transform = `rotate(${rotatevalue}deg)`);
     } else {
-        obs1.style.transform = `rotate(0deg)`;
-        obs2.style.transform = `rotate(0deg)`;
-
+        obss.forEach(el=>el.style.transform = `rotate(0deg)`);
     }
     }
     requestAnimationFrame(rotations)

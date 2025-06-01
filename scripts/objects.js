@@ -28,7 +28,7 @@ requestAnimationFrame(calculateFPS)
 const cat = document.querySelector('#cat');
 const obs1 = document.querySelector('#obs1')
 const obs2 = document.querySelector('#obs2')
-
+const obss = [obs1,obs2];
 let catskin =localStorage.getItem("catskin") ? parseInt(localStorage.getItem("catskin")) : 1;
 let catstats = 1;
 let time = 20;
@@ -49,7 +49,7 @@ let multtemp = 1;
 let gravity = true
 let imortality = false;
 
-let vgravity = moving*0.8;
+let vgravity = movctrl*0.8;
 let bossstats = false;
 let bosslifestats = 10
 

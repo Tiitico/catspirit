@@ -42,7 +42,7 @@ document.addEventListener('keydown', (event) => {
         fallcontrol = timer *25;
         if (lifestats>0) {
             cat.style.height = '7%' 
-            vgravity = moving*0.8
+            vgravity = movctrl*0.8
             if (y>6.8){
                 catstats = 2
                 y-= 4*fpsadjust
@@ -67,7 +67,7 @@ document.addEventListener('keydown', (event) => {
                     cat.style.bottom = `${y}%`
                     requestAnimationFrame(jump)
                 } else {
-                    vgravity = moving*0.8 // Reseta a gravidade quando chega ao topo
+                    vgravity = movctrl*0.8 // Reseta a gravidade quando chega ao topo
                     if (gravity === true) {
                         if (fallcontrol<= 0) {
                             fall()
@@ -96,7 +96,7 @@ document.addEventListener('keydown', (event) => {
                         cat.style.bottom = `${y}%`   
                     }
                     catstats = 1
-                    vgravity = moving*0.8 // Reseta a gravidade ao tocar o chão
+                    vgravity = movctrl*0.8 // Reseta a gravidade ao tocar o chão
                 }
             } else {
                 requestAnimationFrame(fall)

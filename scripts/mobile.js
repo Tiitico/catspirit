@@ -107,7 +107,6 @@ sc2.style.fontSize = `1.2svw`;
   requestAnimationFrame(scaleadjust);
 }
 scaleadjust();
-    let controleAtivo = false;
 
 const nomesDosBotoes = {
   0: "A / X",
@@ -128,43 +127,85 @@ const nomesDosBotoes = {
   15: "D-Pad →",
   16: "Botão central",
 };
+ let controleConectado = false;
+  let pulando = false;
+  let fazendoSquat = false;
 
-    window.addEventListener("gamepadconnected", () => {
-      console.log("Controle conectado!");
-      controleConectado = true;
-controlgamepad()
-    });
-      window.addEventListener("gamepaddisconnected", () => {
+  window.addEventListener("gamepadconnected", () => {
+    console.log("Controle conectado!");
+    controleConectado = true;
+    controlgamepad();
+  });
+
+  window.addEventListener("gamepaddisconnected", () => {
     console.log("Controle desconectado.");
-    controleAtivo = false;
+    controleConectado = false;
   });
 
   function controlgamepad() {
-                const gamepad = navigator.getGamepads()[0];
-      if (gamepad && gamepad.buttons[0].pressed || gamepad && gamepad.buttons[1].pressed || gamepad && gamepad.buttons[2].pressed || gamepad && gamepad.buttons[3].pressed ) {
-      if (powerr=== false) {
-        power()
+    const gamepad = navigator.getGamepads()[0];
+    if (!gamepad) return;
+
+    // Botões 0, 1, 2 ou 3 pressionados
+    if (gamepad.buttons[0].pressed) {
+      if (!powerr) power(); // ativa se ainda não ativou
+    }
+
+    const gpye = gamepad.axes[1]; // analógico esquerdo vertical
+    const gpyd = gamepad.axes[3]; // analógico direito vertical
+
+    // PULAR: puxou analógico para cima (menor que -0.5)
+    if (gpye < -0.2 || gpyd < -0.2||gamepad.buttons[12].pressed) {
+      if (catstats === 1 &&(y <= 6.8 || gravity === false)) {
+        
+      
+      if (!pulando) {
+        pulando = true;
+        squatt = false;
+        cat.style.height = '10%';
+        requestAnimationFrame(jump);
       }
+    }
+    } else {
+      pulando = false; // libera o pulo quando analógico volta
+    }
+
+
+    // AGACHAR: empurrou o analógico para baixo (maior que 0.5)
+    if (gpye > 0.2 || gpyd > 0.2||gamepad.buttons[13].pressed) {
+      if (!fazendoSquat) {
+        fazendoSquat = true;
+        squatt = true;
+        requestAnimationFrame(squat);
+        requestAnimationFrame(squattanimation);
       }
-      const gpy = gamepad.axes[1];
-      if (gamepad && Math.abs(gpy) > 0.1) {
-       if (catstats === 1) {
-        cat.style.height = '10%'
-            if (y<=6.8 || gravity === false ) {
-                squatt =false
-              requestAnimationFrame(jump)  
-        }
-       }
+    } else {
+      if (fazendoSquat) {
+        fazendoSquat = false;
+        squatt = false;
+        cat.style.height = '10%';
       }
-            if (gamepad && Math.abs(gpy) < -0.1) {
-        squatt= true;
-            requestAnimationFrame(squat)
-            requestAnimationFrame(squattanimation)
+    }
+
+    if (gamepad.buttons[9].pressed) {
+      if (lifestats>0) {
+                 pause = true
+        pauseanimationON()
       }else{
-                    cat.style.height= '10%';
-            squatt= false;
+          switch (gameoverchoice) {
+                case 1:
+                    startgame()
+                    break;
+                    case 2:
+                    tutorialanimation()
+                    break;
+                    case 3:
+                        window.location.href = `index.html`;
+                    break;
+            }
       }
-      if (controleConectado === true) {
-        requestAnimationFrame(controlgamepad)
-      }
-  }
+    }
+    if (controleConectado) {
+      requestAnimationFrame(controlgamepad);
+    }
+  }/*doutour ricardo se acha dono do doutor neguinho vistoque ele ve o doutour neguinho como uma propriedado como uma escravidao detalhe a escravidaoacabou em 1888*/
