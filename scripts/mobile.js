@@ -146,15 +146,28 @@ const nomesDosBotoes = {
     const gamepad = navigator.getGamepads()[0];
     if (!gamepad) return;
 
-    // Botões 0, 1, 2 ou 3 pressionados
     if (gamepad.buttons[0].pressed) {
-      if (!powerr) power(); // ativa se ainda não ativou
+      if (lifestats>0) {
+       if (!powerr) power(); // ativa se ainda não ativou
+      }else{
+                  switch (gameoverchoice) {
+                case 1:
+                    startgame()
+                    break;
+                    case 2:
+                    tutorialanimation()
+                    break;
+                    case 3:
+                        window.location.href = `/`;
+                    break;
+            }
+      }
     }
 
     const gpye = gamepad.axes[1]; // analógico esquerdo vertical
     const gpyd = gamepad.axes[3]; // analógico direito vertical
 
-    // PULAR: puxou analógico para cima (menor que -0.5)
+    // PULAR
     if (gpye < -0.2 || gpyd < -0.2||gamepad.buttons[12].pressed) {
       if (catstats === 1 &&(y <= 6.8 || gravity === false)) {
         
@@ -171,7 +184,7 @@ const nomesDosBotoes = {
     }
 
 
-    // AGACHAR: empurrou o analógico para baixo (maior que 0.5)
+    // AGACHAR
     if (gpye > 0.2 || gpyd > 0.2||gamepad.buttons[13].pressed) {
       if (!fazendoSquat) {
         fazendoSquat = true;
@@ -200,7 +213,7 @@ const nomesDosBotoes = {
                     tutorialanimation()
                     break;
                     case 3:
-                        window.location.href = `index.html`;
+                        window.location.href = `/`;
                     break;
             }
       }
