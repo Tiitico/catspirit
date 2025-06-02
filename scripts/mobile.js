@@ -107,8 +107,7 @@ sc2.style.fontSize = `1.2svw`;
   requestAnimationFrame(scaleadjust);
 }
 scaleadjust();
-
-const nomesDosBotoes = {
+/*
   0: "A / X",
   1: "B / O",
   2: "X / Quadrado",
@@ -125,11 +124,13 @@ const nomesDosBotoes = {
   13: "D-Pad ↓",
   14: "D-Pad ←",
   15: "D-Pad →",
-  16: "Botão central",
-};
+  16: "Botão central"
+*/
  let controleConectado = false;
   let pulando = false;
   let fazendoSquat = false;
+  let ladoesq = false
+  let ladodir = false
 
   window.addEventListener("gamepadconnected", () => {
     console.log("Controle conectado!");
@@ -165,11 +166,15 @@ const nomesDosBotoes = {
     }
 
     const gpye = gamepad.axes[1]; // analógico esquerdo vertical
+    const gpxe = gamepad.axes[0];// analogico horizontal esquerdo
     const gpyd = gamepad.axes[3]; // analógico direito vertical
+    const gpxd = gamepad.axes[2];// analogico horizontal esquerdo
+
 
     // PULAR
     if (gpye < -0.2 || gpyd < -0.2||gamepad.buttons[12].pressed) {
-      if (catstats === 1 &&(y <= 6.8 || gravity === false)) {
+     if (lifestats>0) {
+            if (catstats === 1 &&(y <= 6.8 || gravity === false)) {
         
       
       if (!pulando) {
@@ -179,6 +184,17 @@ const nomesDosBotoes = {
         requestAnimationFrame(jump);
       }
     }
+     }else{
+            if (!pulando) {
+              pulando = true;
+            gameoverchoice -= 1; // Subir no menu
+            if (gameoverchoice < 1) {
+                gameoverchoice = 3; // Volta para a última opção
+            }
+             gameovermenucolor();
+          }
+     }
+
     } else {
       pulando = false; // libera o pulo quando analógico volta
     }
@@ -186,18 +202,59 @@ const nomesDosBotoes = {
 
     // AGACHAR
     if (gpye > 0.2 || gpyd > 0.2||gamepad.buttons[13].pressed) {
+      if (lifestats>0) {
       if (!fazendoSquat) {
         fazendoSquat = true;
         squatt = true;
         requestAnimationFrame(squat);
         requestAnimationFrame(squattanimation);
       }
+    }else{
+      if (!fazendoSquat) {
+        fazendoSquat = true
+              gameoverchoice += 1; // Descer no menu
+            if (gameoverchoice > 3) {
+                gameoverchoice = 1; // Volta para a primeira opção
+            }
+            gameovermenucolor()
+      }
+    }
     } else {
       if (fazendoSquat) {
         fazendoSquat = false;
         squatt = false;
         cat.style.height = '10%';
       }
+    }
+
+    if (tutorial === true) {
+       if (gpxe < -0.2 || gpxd < -0.2||gamepad.buttons[14].pressed){
+        if (!ladoesq) {
+          ladoesq = true
+           tutorialchoice -= 1; // esquerda no menu
+        if (tutorialchoice < 1) {
+            tutorialchoice = tutos.length; // Volta para a última opção
+        }
+        tutochoice()
+        }
+
+       }else{
+          ladoesq = false
+        }
+       if (gpxe > 0.2 || gpxd > 0.2||gamepad.buttons[15].pressed){
+ if (!ladodir) {
+          ladodir = true
+           tutorialchoice += 1; // direita no menu
+        if (tutorialchoice > tutos.length) {
+            tutorialchoice = 1; // Volta para a primeira opção
+        }
+        tutochoice()
+        }
+
+       }else{
+          ladodir = false
+        }
+
     }
 
     if (gamepad.buttons[9].pressed) {
@@ -218,6 +275,14 @@ const nomesDosBotoes = {
             }
       }
     }
+        if (gamepad.buttons[1].pressed) {
+          if (tutorial === true) {
+            exittuto()
+          }
+          if (pause === true && tutorial === false) {
+            pauseanimationOFF()
+          }
+        }
     if (controleConectado) {
       requestAnimationFrame(controlgamepad);
     }

@@ -40,7 +40,7 @@ document.addEventListener('keydown', (event) => {
 
     function squat(){
         fallcontrol = timer *25;
-        if (lifestats>0) {
+        if (lifestats>0&& pause === false) {
             cat.style.height = '7%' 
             vgravity = movctrl*0.8
             if (y>6.8){

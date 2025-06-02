@@ -197,7 +197,7 @@ function bonuschoice(){
                     colision= false
                 multperm = 4
                 ultraacelerate()
-                vgravity = moving*0.7;
+                vgravity = movctrl*0.7;
                 score+=250
                 imortality = true
                 venenoimu= true
@@ -217,7 +217,7 @@ function bonuschoice(){
                 gravity = true
                 statsupdate()
                 ultraacelerate()
-                vgravity = moving*0.7;
+                vgravity = movctrl*0.7;
                 
             }else if (bonuschoce> 302 && bonuschoce<= 303) {
                 lifestats += 3 // pedra celestial vermelha
@@ -226,7 +226,7 @@ function bonuschoice(){
             }else if(bonuschoce> 303 && bonuschoce<= 308){
                 venenoimu = true
                 ultraacelerate()
-                vgravity = moving*0.7;
+                vgravity = movctrl*0.7;
                 imortality = true 
                 setTimeout(()=>{
                     imortality = false
