@@ -26,7 +26,7 @@ ch2.addEventListener('click',()=>{
     startgame()
 })
 dh2.addEventListener('click',()=>{
-    window.location.href = `/`;
+    window.location.href = `/index.html`;
 })
 
 function pauseanimationOFF() {

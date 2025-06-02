@@ -76,7 +76,7 @@ document.addEventListener('keydown', (event) => {
                     tutorialanimation()
                     break;
                     case 3:
-                        window.location.href = `/`;
+                        window.location.href = `/index.html`;
                     break;
             }
         }
@@ -104,7 +104,7 @@ b2h2.addEventListener('click',(()=>{
     tutorialanimation()
 }))
 c2h2.addEventListener('click',(()=>{
-    window.location.href = `/`;
+    window.location.href = `/index.html`;
 }))
 
 

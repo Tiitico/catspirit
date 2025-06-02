@@ -287,3 +287,31 @@ scaleadjust();
       requestAnimationFrame(controlgamepad);
     }
   }/*doutour ricardo se acha dono do doutor neguinho vistoque ele ve o doutour neguinho como uma propriedado como uma escravidao detalhe a escravidaoacabou em 1888*/
+
+  const touchdetect = navigator.maxTouchPoints;
+  let touch = false
+
+  document.addEventListener('touchstart',()=>{
+    touch = true
+    touchactive()
+  });
+  document.addEventListener('keydown',()=>{
+    touch === false
+    touchactive()
+  })
+  if(touchdetect > 0) {
+    touch = true
+    touchactive()
+  }
+
+    function touchactive(){
+      switch (touch) {
+        case true:
+          alert('toch')
+          break;
+      
+        default:
+          alert('nao toch')
+          break;
+      }
+    }
