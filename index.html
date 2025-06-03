@@ -49,6 +49,10 @@
               user-select: none;       /* Impede seleção de texto */
   -webkit-user-select: none;  /* Safari */
   -ms-user-select: none; 
+        -webkit-user-drag: none;
+      user-select: none;
+      pointer-events: auto;
+
              scrollbar-color: #ffffff50 #00000000; /* Define a cor do thumb e do track */
             scrollbar-width: large; /* Tamanho da barra de rolagem */
             scroll-behavior: smooth;
@@ -126,7 +130,29 @@
         <div class="censorship" id="stripe2"></div>
         <div class="censorship" id="stripe3"></div>
         <div class="censorship" id="stripe4"></div>
+  <script>
+    // Impede botão direito (context menu)
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
 
+    // Impede copiar (Ctrl+C, clique direito > copiar, etc.)
+    document.addEventListener('copy', (e) => {
+      e.preventDefault();
+    });
+
+    // Impede seleção de qualquer tipo
+    document.addEventListener('selectstart', (e) => {
+      e.preventDefault();
+    });
+
+    // Impede arrastar imagens
+    const imagens = document.querySelectorAll('img');
+    imagens.forEach(img => {
+      img.setAttribute('draggable', false);
+      img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+  </script>
 <script src="./scripts/menu.js"></script>
 <script src="./scripts/objects.js"></script>
 <script src="./scripts/cats.js"></script>
