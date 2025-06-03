@@ -258,3 +258,28 @@ right: 0;
 width: 0vw;
 height:100vh;
 }
+
+#controlls{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #ffffffb7;
+
+}
+#upbt,#downbt,#powerbt{
+    position: absolute;
+}
+#upbt{
+    transform: rotate(-90deg);
+}
+#downbt{
+    transform: rotate(90deg);
+}
+#powerbt{
+    right: 8vw;
+    bottom: 12vw;
+}
+#upbt:hover,#downbt:hover,#powerbt:hover{
+    color: rgb(0, 157, 255);
+}
+

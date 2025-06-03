@@ -1,4 +1,7 @@
 const mainscreen = document.querySelector('#mainscreen');
+const upbt = document.querySelector('#upbt')
+const downbt = document.querySelector('#downbt')
+const powerbt = document.querySelector('#powerbt')
 const stripe1 = document.querySelector('#stripe1');
 const stripe2 = document.querySelector('#stripe2');
 const stripe3 = document.querySelector('#stripe3');
@@ -56,12 +59,20 @@ bh2.style.top = '31.6svh';
 ch2.style.top = '42.2svh';
 dh2.style.top = '52.7svh';
 
+controlls.style.fontSize = '12.7vh';
+
+upbt.style.left = '16.9vh';
+upbt.style.bottom = '33.8vh';
+downbt.style.left = '16.9vh';
+downbt.style.bottom = '8.4vh';
+powerbt.style.right = '16.9vh';
+powerbt.style.bottom = '25.3vh';
+
 fishcounter.style.fontSize = `6.33svh`;
 heartcounter.style.fontSize = `6.33svh`;
 
 sc1.style.fontSize = `2.64svh`;
 sc2.style.fontSize = `2.64svh`;
-
 
 }else{
    width = winWidth;
@@ -92,12 +103,20 @@ bh2.style.top = '15svw';
 ch2.style.top = '20svw';
 dh2.style.top = '25svw';
 
+controlls.style.fontSize = '6vw';
+
+upbt.style.left = '8vw';
+upbt.style.bottom = '16vw';
+downbt.style.left = '8vw';
+downbt.style.bottom = '4vw';
+powerbt.style.right = '8vw';
+powerbt.style.bottom = '12vw';
+
 fishcounter.style.fontSize = `3svw`;
 heartcounter.style.fontSize = `3svw`;
 
 sc1.style.fontSize = `1.2svw`;
 sc2.style.fontSize = `1.2svw`;
-
 
   }
 
@@ -304,14 +323,42 @@ scaleadjust();
     touchactive()
   }
 
-    function touchactive(){
+function touchactive(){
       switch (touch) {
         case true:
-          alert('toch')
-          break;
-      
+          controlls.style.display = 'flex'
+          break;      
         default:
-          alert('nao toch')
+          controlls.style.display = 'none'
           break;
       }
     }
+    touchactive()
+    
+    upbt.addEventListener('touchstart',()=>{
+      if (lifestats>0 && pause === false) {
+       if (catstats === 1) {
+        cat.style.height = '10%'
+            if (y<=6.8 || gravity === false ) {
+                squatt =false
+              requestAnimationFrame(jump)  
+        }
+       }
+      }
+    });
+    downbt.addEventListener('touchstart',()=>{
+      if (lifestats>0&& pause===false) {
+           squatt= true;
+            requestAnimationFrame(squat)
+            requestAnimationFrame(squattanimation)
+      }
+    })
+        downbt.addEventListener('touchend',()=>{
+ cat.style.height= '10%';
+            squatt= false;
+        })
+        powerbt.addEventListener('touchstart',()=>{
+           if (powerr === false) {
+        power()
+    }
+        })
