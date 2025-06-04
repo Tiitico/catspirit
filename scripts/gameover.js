@@ -76,7 +76,7 @@ document.addEventListener('keydown', (event) => {
                     tutorialanimation()
                     break;
                     case 3:
-                        window.location.href = `/index.html`;
+                        window.location.href = `index.html`;
                     break;
             }
         }

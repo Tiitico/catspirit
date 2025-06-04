@@ -63,7 +63,7 @@ document.addEventListener('keydown', (event) => {
                     rotate = 2
                     catstats = 2
                     vgravity *= 0.97 // Diminui gradualmente para simular perda de força ao subir
-                    y += (2.2*fpsadjust) * vgravity
+                    y += (2.2*fpsadjust)
                     cat.style.bottom = `${y}%`
                     requestAnimationFrame(jump)
                 } else {
@@ -85,7 +85,7 @@ document.addEventListener('keydown', (event) => {
                 if (y > 6.8) {
                     rotate = 1
                     vgravity *= 1.02// Aumenta gradualmente para simular aceleração da queda
-                    y -= (2*fpsadjust) * vgravity
+                    y -= (2*fpsadjust) 
                     if (lifestats>0) {
                         cat.style.bottom = `${y}%`
                     }

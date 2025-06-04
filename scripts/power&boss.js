@@ -57,15 +57,15 @@ function bonustime() {
             bonuschoce = 1
             bonustimer = 1;
             }else if(score < 200 ){
-                bonustimer = parseInt(Math.random() * 10000) + 1000;
+                bonustimer = parseInt(Math.random() * 10000) + 5000;
              bonuschoce = parseInt(Math.random() * 265) + 1;
                 }else if(score > 200 ){
-                    bonustimer = parseInt(Math.random() * 10000) + 1000;
+                    bonustimer = parseInt(Math.random() * 10000) + 5000;
                   bonuschoce = parseInt(Math.random() * 308) + 1;
              }
     by = parseInt(Math.random() * 29) + 7; 
     }
-    setTimeout(bonusmoving, bonustimer) 
+    setTimeout(()=>{bonusmoving()}, bonustimer) 
     
     }
 
