@@ -42,12 +42,10 @@ if (height > winHeight) {
     ah2.style.fontSize = '2.96svh';
     bh2.style.fontSize = '2.96svh';
     ulmenu.style.fontSize = '2.96svh';
-  
 }
   else{
     width = winWidth;
     height = width / BASE_RATIO;
-
     description.style.fontSize ='1.4svw';
     skinleftbtn.style.fontSize = '10svw';
     skinrighttbtn.style.fontSize = '10svw';
@@ -57,8 +55,6 @@ if (height > winHeight) {
     ah2.style.fontSize = '1.4svw';
     bh2.style.fontSize = '1.4svw';
     ulmenu.style.fontSize = '1.4svw';
-
-
   }
   mainscreen.style.width = `${width}px`;
   mainscreen.style.height = `${height}px`;

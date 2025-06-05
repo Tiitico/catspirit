@@ -178,7 +178,7 @@ scaleadjust();
                     tutorialanimation()
                     break;
                     case 3:
-                        window.location.href = `/`;
+                        window.location.href = `index.html`;
                     break;
             }
       }
@@ -289,7 +289,7 @@ scaleadjust();
                     tutorialanimation()
                     break;
                     case 3:
-                        window.location.href = `/`;
+                        window.location.href = `index.html`;
                     break;
             }
       }
