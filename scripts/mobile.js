@@ -61,12 +61,16 @@ dh2.style.top = '52.7svh';
 
 controlls.style.fontSize = '12.7vh';
 
+lifehud.style.height = '67.5vh'
+lifeblur.style.filter = 'blur(2.1vh)'
+
 upbt.style.left = '16.9vh';
 upbt.style.bottom = '33.8vh';
 downbt.style.left = '16.9vh';
 downbt.style.bottom = '8.4vh';
 powerbt.style.right = '16.9vh';
 powerbt.style.bottom = '25.3vh';
+
 
 fishcounter.style.fontSize = `6.33svh`;
 heartcounter.style.fontSize = `6.33svh`;
@@ -104,6 +108,9 @@ ch2.style.top = '20svw';
 dh2.style.top = '25svw';
 
 controlls.style.fontSize = '6vw';
+
+lifehud.style.height = '32vw'
+lifeblur.style.filter = 'blur(1vw)'
 
 upbt.style.left = '8vw';
 upbt.style.bottom = '16vw';

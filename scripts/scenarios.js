@@ -71,7 +71,7 @@ function start() {
     aceleration()
     obchoce()
     bonusmoving()
-    bosscontroller()
+    bossaparicion()
 scenario1moving()
 }
 statsupdate()

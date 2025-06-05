@@ -86,11 +86,14 @@
             <img src="./public/sources/scenarios/beachcity.png" class="scenario"id='scenario1'>
             <img src="./public/sources/scenarios/beachcity.png" class="scenario"id='scenario2'>
         </div>
-        <div id="bosshud">
+        <div style='opacity: 0; transition: 360ms;' id="bosshud">
             <div class="fundo">
                 <div id="lifeboss"></div>
             </div>
-            <img src="./public/sources/objects/bosslife.png" class="lifehud">
+            <img src="./public/sources/objects/bosslife.png" id="lifehud">
+            <div style="background-color: #00000000;" class="fundo">
+            <div id="lifeblur"></div>
+            </div>
         </div>
         <div class="statusbar" id="statusbar">
             <div class="fish" id="fish"></div>

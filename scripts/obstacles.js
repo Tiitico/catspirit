@@ -6,7 +6,7 @@
         
         if (pause === false&& bossstats === false ) {
 if (accontroll> 0) {
-    accontroll -= 10
+    accontroll -= 10*fpsadjust
     requestAnimationFrame(aceleration)
 }else{
 

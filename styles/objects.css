@@ -204,23 +204,29 @@ h6{
     transition: 200ms;
     position: absolute;
     left: 0;
-    background-color: #a91c1c;
+    background-color:rgb(255, 0, 0);
     height: 100%;
-    width: 0%;
+    width: 100%;
   }
-  .lifehud{
+  #lifeblur{
+    transition: 200ms;
     position: absolute;
-    height: 340%;
+    left: -8%;
+    background-color:rgba(255, 0, 0, 0.5);
+    border-radius: 36px;
+    height: 100%;
+    bottom: 10%;
+    width: 112%;
+  }
+  #lifehud{
+    position: absolute;
+    height: 32vw;
     top: -130%;
   }
-  .poweran{
-    border-radius: 400%;
-    position: absolute;
-    left: 0%;
-    bottom: -150%;
-    width: 100%;
-    height: 400%;
-}
+  #bosshud{
+    width: 24%;
+    height: 20%;
+  }
 .powercat{
     position: absolute;
     height: 250%;
@@ -231,13 +237,11 @@ h6{
     width: 150%;
     bottom: 24%;
     left: 10%;
-
 }
 .censorship{
     position: absolute;
     background-color: black;
 }
-
 #stripe1{
 top: 0;
 width: 100vw;
@@ -258,13 +262,11 @@ right: 0;
 width: 0vw;
 height:100vh;
 }
-
 #controlls{
     position: absolute;
     height: 100%;
     width: 100%;
     color: #ffffffb7;
-
 }
 #upbt,#downbt,#powerbt{
     position: absolute;
@@ -275,11 +277,6 @@ height:100vh;
 #downbt{
     transform: rotate(90deg);
 }
-#powerbt{
-    right: 8vw;
-    bottom: 12vw;
-}
 #upbt:hover,#downbt:hover,#powerbt:hover{
     color: rgb(0, 157, 255);
 }
-

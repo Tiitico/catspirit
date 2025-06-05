@@ -11,6 +11,7 @@ function power() {
         powerstats -= 1;
         bosslifestats-=1
         lifeboss.style.width = `${bosslifestats*10}%`
+        lifeblur.style.width = `${bosslifestats*10+12}%`
         powerr = true
         poweranimation()
         setTimeout(()=>{
@@ -383,11 +384,12 @@ let bosstimer = parseInt(Math.random() * 10000) + 25000;
 function bosscontroller(){
     if (bossstats === false&&lifestats>0) {
         if (pause===false) {    
-        bosstimer -= 10
+        bosstimer -= 10*fpsadjust
     }
         if (bosstimer<=0&&pause === false) {
             bosslifestats = 10
             lifeboss.style.width = `${bosslifestats*10}%`
+            lifeblur.style.width = `${bosslifestats*11.2}%`
             bonuschoce = 1
             bonusmoving()
             bossaparicion()
@@ -405,13 +407,9 @@ function bossaparicion(){
 bossstats = true
 bosshud.style.display = 'flex'
 boss.style.display = 'flex'
-if (bhx < 10) {
-    if (pause === false ) {
-        bhx += moving*0.5;
-        bosshud.style.top =`${bhx}%`
-    }
-    
-}
+setTimeout(()=>{
+bosshud.style.opacity = '100%';
+},480)
 if (bossx > 76) {
     if (pause === false ) {
         bossx -= moving*0.36;
@@ -430,7 +428,7 @@ function balistmoving1() {
     if (bossstats === true&& lifestats>0) {
     balist1.style.display = 'flex'
     if (pause === false) {
-     bosstimer-=10
+     bosstimer-=10*fpsadjust
     }
     if (bosstimer>=1) {
         ox2 = 80
@@ -473,7 +471,7 @@ function balistmoving2() {
     if (bossstats===true &&lifestats>0) {
     balist2.style.display = 'flex'
     if (pause === false) {
-        bosstimer-=10
+        bosstimer-=10*fpsadjust
     }
     if (bosstimer>=1) {
         ox2 = 80
@@ -517,7 +515,7 @@ let bosstimer2 =10000
 function bosslife() {
     if (bosslifestats > 0&&lifestats>0) {
         if (pause === false)  {
-            bosstimer2 -=5
+            bosstimer2 -=5*fpsadjust
         }
         if (bosstimer2<=0) {
             lifestats = 0
@@ -539,12 +537,11 @@ function bossoff(){
     balist2.style.display = 'none'
     balist2.style.left =`${ox2}%`
     balist1.style.left =`${ox2}%`
-    if (bhx > -20) {
-        if (pause === false ) {
-            bhx -= moving*0.7;
-            bosshud.style.top =`${bhx}%`
-        }
-    }else{bosshud.style.display='none'}
+  
+    bosshud.style.opacity = '0%'
+    setTimeout(()=>{
+            bosshud.style.display='none'
+    },480)
     if (bossx < 100) {
         if (pause === false ) {
             bossx += moving*0.36;
