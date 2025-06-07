@@ -2,6 +2,7 @@ const mainscreen = document.querySelector('#mainscreen');
 const upbt = document.querySelector('#upbt')
 const downbt = document.querySelector('#downbt')
 const powerbt = document.querySelector('#powerbt')
+const fundo = document.querySelector('.fundo')
 const stripe1 = document.querySelector('#stripe1');
 const stripe2 = document.querySelector('#stripe2');
 const stripe3 = document.querySelector('#stripe3');
@@ -59,18 +60,22 @@ bh2.style.top = '31.6svh';
 ch2.style.top = '42.2svh';
 dh2.style.top = '52.7svh';
 
-controlls.style.fontSize = '12.7vh';
+controlls.style.fontSize = '12.7svh';
 
-lifehud.style.height = '67.5vh'
-lifeblur.style.filter = 'blur(2.1vh)'
+lifehud.style.height = '67.5svh'
+lifeblur.style.filter = 'blur(2.1svh)'
 
-upbt.style.left = '16.9vh';
-upbt.style.bottom = '33.8vh';
-downbt.style.left = '16.9vh';
-downbt.style.bottom = '8.4vh';
-powerbt.style.right = '16.9vh';
-powerbt.style.bottom = '25.3vh';
+upbt.style.left = '16.9svh';
+upbt.style.bottom = '33.8svh';
+downbt.style.left = '16.9svh';
+downbt.style.bottom = '8.4svh';
+powerbt.style.right = '16.9svh';
+powerbt.style.bottom = '25.3svh';
 
+fundo.style.left = '4.2svh'
+fundo.style.height = '4.2svh'
+fundo.style.width = '44.3svh'
+fundo.style.bottom = '9.7svh'
 
 fishcounter.style.fontSize = `6.33svh`;
 heartcounter.style.fontSize = `6.33svh`;
@@ -107,17 +112,23 @@ bh2.style.top = '15svw';
 ch2.style.top = '20svw';
 dh2.style.top = '25svw';
 
-controlls.style.fontSize = '6vw';
+controlls.style.fontSize = '6svw';
 
-lifehud.style.height = '32vw'
-lifeblur.style.filter = 'blur(1vw)'
+lifehud.style.height = '32svw'
+lifeblur.style.filter = 'blur(1svw)'
 
-upbt.style.left = '8vw';
-upbt.style.bottom = '16vw';
-downbt.style.left = '8vw';
-downbt.style.bottom = '4vw';
-powerbt.style.right = '8vw';
-powerbt.style.bottom = '12vw';
+upbt.style.left = '8svw';
+upbt.style.bottom = '16svw';
+downbt.style.left = '8svw';
+downbt.style.bottom = '4svw';
+powerbt.style.right = '8svw';
+powerbt.style.bottom = '12svw';
+
+fundo.style.left = '2svw'
+fundo.style.height = '2svw'
+fundo.style.width = '21svw'
+fundo.style.bottom = '4.6svw'
+
 
 fishcounter.style.fontSize = `3svw`;
 heartcounter.style.fontSize = `3svw`;
@@ -343,6 +354,7 @@ function touchactive(){
     touchactive()
     
     upbt.addEventListener('touchstart',()=>{
+      upbt.style.color = ' rgb(0, 157, 255)'
       if (lifestats>0 && pause === false) {
        if (catstats === 1) {
         cat.style.height = '10%'
@@ -353,7 +365,11 @@ function touchactive(){
        }
       }
     });
+    upbt.addEventListener('touchend', ()=>{
+      upbt.style.color =' #ffffffb7';
+    })
     downbt.addEventListener('touchstart',()=>{
+      downbt.style.color = ' rgb(0, 157, 255)'
       if (lifestats>0&& pause===false) {
            squatt= true;
             requestAnimationFrame(squat)
@@ -361,11 +377,16 @@ function touchactive(){
       }
     })
         downbt.addEventListener('touchend',()=>{
+             downbt.style.color =' #ffffffb7';
  cat.style.height= '10%';
             squatt= false;
         })
         powerbt.addEventListener('touchstart',()=>{
+          powerbt.style.color = ' rgb(0, 157, 255)'
            if (powerr === false) {
         power()
     }
+        })
+        powerbt.addEventListener('touchend',()=>{
+          powerbt.style.color =' #ffffffb7';
         })

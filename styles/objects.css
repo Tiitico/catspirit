@@ -198,13 +198,14 @@ h6{
     background-color: #3c2222;
     height: 24%;
     width: 84%;
-    bottom: 50%;
+    bottom: 46%;
     
   }
   #lifeboss{
     transition: 200ms;
     position: absolute;
     left: 0;
+    top: 0;
     background-color:rgb(255, 0, 0);
     height: 100%;
     width: 100%;
@@ -278,7 +279,4 @@ height:100vh;
 }
 #downbt{
     transform: rotate(90deg);
-}
-#upbt:hover,#downbt:hover,#powerbt:hover{
-    color: rgb(0, 157, 255);
 }
