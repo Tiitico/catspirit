@@ -129,7 +129,7 @@ let menos = true
 
 function skinselector(){
     if (pause === false&&powerr === false&&colision=== false) {
-obskctrl-=1
+obskctrl-=1*fpsadjust
 let obj = obsskin.find(obs => obs.id === obsskinchoice)
 
 let sprite = obj.sprite1;
@@ -144,6 +144,10 @@ else {
     sprite = obj.sprite1;
 }
 
+obss.forEach(el=>el.style.height = `${obj.heigth}%`)
+obss.forEach(el=>el.style.width = `${obj.width}%`)
+obss.forEach(el=>el.style.bottom = `${obj.bottom}%`)
+//repetir pra evitar falhas
 obss.forEach(el=>el.style.height = `${obj.heigth}%`)
 obss.forEach(el=>el.style.width = `${obj.width}%`)
 obss.forEach(el=>el.style.bottom = `${obj.bottom}%`)
@@ -165,7 +169,7 @@ let rotateboss = rotatevalue*1;
 function rotations(){
     let obj = obsskin.find(obs => obs.id === obsskinchoice)
     if (pause === false && lifestats>0) {
-        rotatevalue += menos ? -1 : 1;
+        rotatevalue += menos ? -1*fpsadjust : 1*fpsadjust;
         if (rotatevalue >= 10) menos = true;
         else if (rotatevalue <= -10) menos = false;
         rotateboss = rotatevalue*0.2;

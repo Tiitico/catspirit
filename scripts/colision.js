@@ -30,7 +30,7 @@ function bonuscolision(){
             setTimeout(()=>{
             colisionbonus = false
             bonustime()
-            },20)
+            },320)
         }  
     }
 }

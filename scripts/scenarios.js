@@ -1,16 +1,14 @@
-const scenario1 = document.querySelector('#scenario1')
 
-const scenario2 = document.querySelector('#scenario2')
 let scenario1position =0 
 let scenario2position = 100
 let scenario1started = false
 let scenario2started = false
-let scenariomv = moving*0.8
+let scenariomv = movctrl*0.8
 function scenario1moving() {
     scenario1.style.display = 'flex'
     scenario1started = true
 if (lifestats>0) {
-    scenariomv = moving*0.8
+    scenariomv = movctrl*0.8
 }else{
     scenariomv *=0.96
 }
@@ -22,7 +20,7 @@ if (lifestats>0) {
                     scenario2moving()
                 }
             }
-            scenario1position -= scenariomv;
+            scenario1position -= scenariomv*fpsadjust;
         }
 requestAnimationFrame(scenario1moving)
 } else {
@@ -37,7 +35,7 @@ function scenario2moving() {
     scenario2.style.display = 'flex'
     scenario2started = true
     if (lifestats>0) {
-        scenariomv = moving*0.8
+        scenariomv = movctrl*0.8
     }else{
         scenariomv *=0.97
     }
@@ -50,7 +48,7 @@ function scenario2moving() {
 
                     }
                 }
-                scenario2position -= scenariomv;
+                scenario2position -= scenariomv*fpsadjust;
             }
     requestAnimationFrame(scenario2moving)
     } else {
@@ -71,7 +69,7 @@ function start() {
     aceleration()
     obchoce()
     bonusmoving()
-    bossaparicion()
+    bosscontroller()
 scenario1moving()
 }
 statsupdate()
