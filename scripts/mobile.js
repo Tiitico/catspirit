@@ -168,16 +168,25 @@ scaleadjust();
   let fazendoSquat = false;
   let ladoesq = false
   let ladodir = false
+  const touchdetect = navigator.maxTouchPoints;
+    let touch = false
+
 
   window.addEventListener("gamepadconnected", () => {
     console.log("Controle conectado!");
     controleConectado = true;
+    touch = false
+    touchactive()
     controlgamepad();
   });
 
   window.addEventListener("gamepaddisconnected", () => {
     console.log("Controle desconectado.");
     controleConectado = false;
+    if (touchdetect > 0) {
+      touch === true
+      touchactive()
+    }
   });
 
   function controlgamepad() {
@@ -323,22 +332,18 @@ scaleadjust();
     if (controleConectado) {
       requestAnimationFrame(controlgamepad);
     }
-  }/*doutour ricardo se acha dono do doutor neguinho vistoque ele ve o doutour neguinho como uma propriedado como uma escravidao detalhe a escravidaoacabou em 1888*/
-
-  const touchdetect = navigator.maxTouchPoints;
-  let touch = false
+  }
 
   document.addEventListener('touchstart',()=>{
     touch = true
     touchactive()
   });
   document.addEventListener('keydown',()=>{
-    touch === false
+    touch = false
     touchactive()
   })
   if(touchdetect > 0) {
     touch = true
-    touchactive()
   }
 
 function touchactive(){
