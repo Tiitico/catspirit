@@ -104,7 +104,7 @@ b2h2.addEventListener('click',(()=>{
     tutorialanimation()
 }))
 c2h2.addEventListener('click',(()=>{
-    window.location.href = `/index.html`;
+    window.location.href = `index.html`;
 }))
 
 
