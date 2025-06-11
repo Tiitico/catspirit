@@ -65,6 +65,7 @@ controlls.style.fontSize = '12.7svh';
 lifehud.style.height = '67.5svh'
 lifeblur.style.filter = 'blur(2.1svh)'
 
+pausebt.style.fontSize = '4.2svh';
 upbt.style.left = '16.9svh';
 upbt.style.bottom = '33.8svh';
 downbt.style.left = '16.9svh';
@@ -117,6 +118,7 @@ controlls.style.fontSize = '6svw';
 lifehud.style.height = '32svw'
 lifeblur.style.filter = 'blur(1svw)'
 
+pausebt.style.fontSize = '2svw';
 upbt.style.left = '8svw';
 upbt.style.bottom = '16svw';
 downbt.style.left = '8svw';

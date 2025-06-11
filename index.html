@@ -54,7 +54,6 @@
         -webkit-user-drag: none;
       user-select: none;
       pointer-events: auto;
-
              scrollbar-color: #ffffff50 #00000000; /* Define a cor do thumb e do track */
             scrollbar-width: large; /* Tamanho da barra de rolagem */
             scroll-behavior: smooth;
@@ -65,23 +64,18 @@
             shape-rendering: auto;
             will-change: auto;
         }
-        
         div{
             display: flex;         
                justify-content: center;
-
         }
         #mainscreen{
             background-color: rgb(62, 62, 104);
                 width: 100svw;
     height: 100svh;
-    
             position: absolute;
     transform-origin: top left ;
-    
         }
     </style>
-
 </head>
 <body>
     <div id="mainscreen"> 
@@ -94,7 +88,9 @@
             <a class="img" href="https://www.instagram.com/thiago.finatti/">
                 <img class='instagram'src="./public/sources/objects/instagram.png" alt="">
             </a></div>
-        <div class="ui" id="doacoes"></div>
+        <div class="ui" id="doacoes">
+            <img id="imgdonate"src="./public/sources/objects/heart.png" alt="">
+        </div>
         <div class="ui" id="infs"></div>
         <div class="ui" id="estatisticas"></div>
         <div class="buttons">
@@ -111,6 +107,10 @@
                     <h2 class="ah2" id="ah2">jogar</h2>
                     <h2 class="bh2" id="bh2">tutorial</h2>
                 </ul>
+            </div>
+            <div id="screendonate">
+                <h1 class="esc" id="escdonate">×</h1>
+                <h1 id="textdonate">indisponivel.</h1>
             </div>
             <div class="tutoscreen" id="tutoscreen">
                 <h1 class="esc" id="esc">×</h1>

@@ -90,7 +90,6 @@ function catskinnotmore() {
     localStorage.setItem("catskin", catskin);
     changeskin();
 }
-
       const d1 = document.querySelector('#d1');
 const d2 = document.querySelector('#d2');
 const d3 = document.querySelector('#d3');
@@ -114,6 +113,45 @@ const d4 = document.querySelector('#d4');
     setTimeout(()=>{
     startgame()
     },600)
+}
+const donates = document.querySelector('#doacoes')
+const escdonate = document.querySelector('#escdonate')
+
+function donatescreen(){
+
+    screendonate.style.display ='flex'
+    screendonate.style.width= '0.1%'
+    setTimeout(()=>{
+    screendonate.style.transition ='200ms'
+    screendonate.style.background = 'rgb(0, 0, 0)'
+    screendonate.style.height= '80%'
+    setTimeout(() => {
+        screendonate.style.width= '70%'
+        setTimeout(()=>{
+           screendonate.style.color = 'rgb(255,255,255'
+        },100)
     
-    
-    }
+    }, 200);
+    },100)
+}
+function donateesc(){
+     screendonate.style.width= '0.1%'
+    screendonate.style.color = 'rgba(0,0,0,0)'
+    setTimeout(()=>{
+    screendonate.style.transition ='600ms'
+    screendonate.style.height= '0%'
+    screendonate.style.background = 'rgba(0, 0,0,0)'
+    setTimeout(() => {
+        screendonate.style.width= '0%'
+        setTimeout(()=>{
+screendonate.style.display = 'none'
+},100)    
+    }, 200);
+    },100)
+}
+escdonate.addEventListener('click',()=>{
+donateesc()
+})
+donates.addEventListener('click', ()=>{
+donatescreen()
+})

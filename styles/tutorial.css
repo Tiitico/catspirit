@@ -14,6 +14,7 @@
     height: auto;
 }
 .esc{
+    cursor: pointer;
     text-shadow: none;
     padding: 3%;
     position: absolute;
@@ -24,6 +25,7 @@
     transition: 400ms;
     color: rgb(255, 31, 87);}
 #btntt{
+    cursor: pointer;
     text-shadow: none;
     left:10%;
     position: absolute;
@@ -34,6 +36,7 @@
     transition: 400ms;
     color: rgb(31, 121, 255);}
 #btntt2{
+    cursor: pointer;
     text-shadow: none;
     right: 10%;
     padding: 1%;

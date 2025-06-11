@@ -119,6 +119,7 @@ ul{
 }
 
 #a2h2,#b2h2,#c2h2{
+    cursor: pointer;
             display: block;
             align-items: center;
         text-align: center;
@@ -279,4 +280,11 @@ height:100vh;
 }
 #downbt{
     transform: rotate(90deg);
+}
+#pausebt{
+    cursor: pointer;
+    opacity: 80%;
+    position: absolute;
+    top: 3%;
+    right: 6%;
 }

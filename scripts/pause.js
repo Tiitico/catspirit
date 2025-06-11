@@ -1,5 +1,6 @@
 const pausedetail = document.querySelector('#pause');
-const pausemenu = document.querySelector('#pausemenu')
+const pausemenu = document.querySelector('#pausemenu');
+const pausebt = document.querySelector('#pausebt')
 
 function pauseanimationON() {
     if (pause === true) {
@@ -46,7 +47,12 @@ setTimeout(()=>{
     pause = false
 },500)
     }
-
+pausebt.addEventListener('click', ()=>{
+        if(pause === false && lifestats>0){
+    pause = true
+    pauseanimationON()
+}
+})
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === 'hidden') {
     if(pause === false && lifestats>0){

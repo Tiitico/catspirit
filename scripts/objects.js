@@ -78,6 +78,6 @@ let score = 0;
 let bestscore = localStorage.getItem("bestscore") ? parseInt(localStorage.getItem("bestscore")) : 0;
 
 function startgame(){
-    window.location.href = `teste.html`;
+    window.location.href = `gamedemo.html`;
     }
 

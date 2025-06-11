@@ -117,7 +117,9 @@ ul{
     line-height: 240%;
     width: 100%;
 }
-
+#imgdonate{
+    height: 180%;
+}
 .ui{
     position: absolute;
     height: 10%;
@@ -143,11 +145,11 @@ ul{
 }
 #doacoes{
     left: 5%;
-    bottom:24% ;
+    bottom:12% ;
 }
 #infs{
     left: 5%;
-    bottom: 12%;
+    bottom: 24%;
 }
 a{
     position: absolute;
@@ -224,4 +226,14 @@ height: 100vh;
 right: 0;
 width: 0vw;
 height:100vh;
+}
+#screendonate{
+    transition: 1200ms;
+    color: #ffffff00;
+    background-color: #000000;
+    position: absolute;
+    display: none;
+    bottom: 10%;
+    height: 0;
+    width: 0;
 }
