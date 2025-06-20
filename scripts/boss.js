@@ -1,5 +1,3 @@
-const balistimg1 = document.querySelector('#balistimg1');
-const balistimg2 = document.querySelector('#balistimg2');
 let bossx = 100
 let bosstimer = parseInt(Math.random() * 10000) + 25000;
 function bosscontroller(){

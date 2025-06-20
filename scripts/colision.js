@@ -1,7 +1,6 @@
 const obstacle = document.querySelector('#obstacle');
 const obstacle2 = document.querySelector('#obstacle2');
 const bonus = document.querySelector('#bonus');
-const boss = document.querySelector('#boss')
 const balist1 = document.querySelector('#balist1')
 const balist2 = document.querySelector('#balist2')
 
