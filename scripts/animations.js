@@ -184,33 +184,27 @@ let powerrotate = 10
 const power1 = document.querySelector('#power1')
 const power2 = document.querySelector('#power2')
 const power3 = document.querySelector('#power3')
-function poweranimation(){
-if (powerr=== true) {
- const voidcut = [power1, power2, power3];
-
-        voidcut.forEach(el => el.src = './public/sources/objects/power1.png');
-        
-        setTimeout(() => {
-            voidcut.forEach(el => el.src = './public/sources/objects/power2.png');
-        
-            setTimeout(() => {
-                voidcut.forEach(el => el.src = './public/sources/objects/power3.png');
-        
-                setTimeout(() => {
-                voidcut.forEach(el => el.src = './public/sources/objects/power4.png');
-
-                                setTimeout(() => {
-                                voidcut.forEach(el => el.src = './public/sources/objects/power5.png');
-
-                                        setTimeout(() => {
-                                        voidcut.forEach(el => el.src = '');
-
-                    }, 120);
-                    }, 60);
-                }, 60);
-            }, 60);
-        }, 60);
-
-
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function poweranimation() {
+    if (powerr === true) {
+        const voidcut = [power1, power2, power3];
+        const srcs = [
+            './public/sources/objects/power1.png',
+            './public/sources/objects/power2.png',
+            './public/sources/objects/power3.png',
+            './public/sources/objects/power4.png',
+            './public/sources/objects/power5.png',
+            ''
+        ];
+        const delays = [60, 60, 60, 60, 120];
+        for (let i = 0; i < srcs.length; i++) {
+            voidcut.forEach(el => el.src = srcs[i]);
+            if (i < delays.length) {
+                await sleep(delays[i]);
+            }
+        }
+    }
 }
