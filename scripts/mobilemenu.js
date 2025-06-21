@@ -1,11 +1,3 @@
-const mainscreen = document.querySelector('#mainscreen');
-const stripe1 = document.querySelector('#stripe1');
-const stripe2 = document.querySelector('#stripe2');
-const stripe3 = document.querySelector('#stripe3');
-const stripe4 = document.querySelector('#stripe4');
-const classcat = document.querySelector('#class');
-const namemenu = document.querySelector('#name')
-
 const BASE_WIDTH = 1536;
 const BASE_HEIGHT = 728;
 const BASE_RATIO = BASE_WIDTH / BASE_HEIGHT;
@@ -34,8 +26,8 @@ if (height > winHeight) {
     width = height * BASE_RATIO;
 
     description.style.fontSize ='2.96svh';
-    skinleftbtn.style.fontSize = '21.1svh';
-    skinrighttbtn.style.fontSize = '21.1svh';
+    left_btn.style.fontSize = '21.1svh';
+    right_btn.style.fontSize = '21.1svh';
     tittle.style.fontSize = '4.4svh';
     classcat.style.fontSize = '2.1svh';
     namemenu.style.fontSize='2.96svh';
@@ -49,8 +41,8 @@ if (height > winHeight) {
     width = winWidth;
     height = width / BASE_RATIO;
     description.style.fontSize ='1.4svw';
-    skinleftbtn.style.fontSize = '10svw';
-    skinrighttbtn.style.fontSize = '10svw';
+    left_btn.style.fontSize = '10svw';
+    right_btn.style.fontSize = '10svw';
     tittle.style.fontSize = '2.1svw';
     classcat.style.fontSize = '1svw';
     namemenu.style.fontSize='1.4svw';

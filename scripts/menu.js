@@ -1,8 +1,5 @@
-const skinleftbtn =document.querySelector('#left_btn');
-const skinrighttbtn =document.querySelector('#right_btn');
-
-skinleftbtn.addEventListener('click',()=> { catskinmore() });
-skinrighttbtn.addEventListener('click',()=> { catskinnotmore() });
+left_btn.addEventListener('click',()=> { catskinmore() });
+right_btn.addEventListener('click',()=> { catskinnotmore() });
 
 let menuchoice = 1;
     document.addEventListener('keydown',(event)=> {
@@ -90,10 +87,6 @@ function catskinnotmore() {
     localStorage.setItem("catskin", catskin);
     changeskin();
 }
-      const d1 = document.querySelector('#d1');
-const d2 = document.querySelector('#d2');
-const d3 = document.querySelector('#d3');
-const d4 = document.querySelector('#d4');
 
       function startanimation() {
         d1.style.transition = '800ms'
@@ -114,8 +107,6 @@ const d4 = document.querySelector('#d4');
     startgame()
     },600)
 }
-const donates = document.querySelector('#doacoes')
-const escdonate = document.querySelector('#escdonate')
 
 function donatescreen(){
 
@@ -152,6 +143,6 @@ screendonate.style.display = 'none'
 escdonate.addEventListener('click',()=>{
 donateesc()
 })
-donates.addEventListener('click', ()=>{
+doacoes.addEventListener('click', ()=>{
 donatescreen()
 })

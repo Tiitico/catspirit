@@ -24,10 +24,6 @@ function calculateFPS(now) {
 }
 requestAnimationFrame(calculateFPS)
 
-const cat = document.querySelector('#cat');
-const obs1 = document.querySelector('#obs1')
-const obs2 = document.querySelector('#obs2')
-const obss = [obs1,obs2];
 let catskin =localStorage.getItem("catskin") ? parseInt(localStorage.getItem("catskin")) : 1;
 let catstats = 1;
 let time = 20;

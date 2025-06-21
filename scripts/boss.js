@@ -16,9 +16,7 @@ function bosscontroller(){
         else{requestAnimationFrame(bosscontroller)}
     }
 }
-const bosshud = document.querySelector('#bosshud')
 let bhx =-20;
-const bossimg = document.querySelector('#bossimg')
 function bossaparicion(){
     if (lifestats>0) {
         

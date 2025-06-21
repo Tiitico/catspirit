@@ -1,7 +1,3 @@
-const pausedetail = document.querySelector('#pause');
-const pausemenu = document.querySelector('#pausemenu');
-const pausebt = document.querySelector('#pausebt')
-
 function pauseanimationON() {
     if (pause === true) {
         pausedetail.style.display = 'flex'

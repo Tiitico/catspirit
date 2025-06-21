@@ -1,5 +1,9 @@
-const catimg = document.querySelector('.cat')
     const squats = cats.filter(cat => cat.id === catskin).map(cat => `${cat.squat}`);
+    const run1 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run1}`);
+    const run2 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run2}`);
+    const run3 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run3}`);
+    const cat1 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.image}`);
+    catimg.src = cat1
 
 function squattanimation() {
     if (lifestats>0) {
@@ -12,12 +16,6 @@ function squattanimation() {
             }
 }
 } 
-        const run1 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run1}`);
-        const run2 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run2}`);
-        const run3 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.run3}`);
-        const gameover = cats.filter(cat => cat.id === catskin).map(cat => `${cat.gameover}`);
-        const cat1 = cats.filter(cat => cat.id === catskin).map(cat => `${cat.image}`);
-        catimg.src = cat1
 
 function runanimations(){        
 if (catstats===1 && lifestats >0 &&  squatt===false ) {
@@ -173,17 +171,7 @@ function poisonanimation(){
     }
 
 }
-const d1 = document.querySelector('#d1');
-const d2 = document.querySelector('#d2');
-const d3 = document.querySelector('#d3');
-const d4 = document.querySelector('#d4');
 
-const poweran =document.querySelector('#poweran')
-let menosp = true
-let powerrotate = 10
-const power1 = document.querySelector('#power1')
-const power2 = document.querySelector('#power2')
-const power3 = document.querySelector('#power3')
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

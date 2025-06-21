@@ -1,5 +1,3 @@
-const gameoverscreen = document.querySelector('#gameoverscreen');
-const frase =document.querySelector('#frase');
 let gameoverchoice = 1;
 const nomegato = cats
 .filter(cat => cat.id === catskin)

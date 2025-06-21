@@ -1,12 +1,5 @@
-const mainscreen = document.querySelector('#mainscreen');
-const upbt = document.querySelector('#upbt')
-const downbt = document.querySelector('#downbt')
-const powerbt = document.querySelector('#powerbt')
 const fundo = document.querySelector('.fundo')
-const stripe1 = document.querySelector('#stripe1');
-const stripe2 = document.querySelector('#stripe2');
-const stripe3 = document.querySelector('#stripe3');
-const stripe4 = document.querySelector('#stripe4');
+
 
 const BASE_WIDTH = 1536;
 const BASE_HEIGHT = 728;

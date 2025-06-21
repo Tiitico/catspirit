@@ -1,9 +1,3 @@
-
-const divskins = document.querySelector('#divskins');
-const catname = document.querySelector('#name')
-const desctext = document.querySelector('#desctext')
-const catclass = document.querySelector('#catclass')
-
 function changeskin() {
 
     const selectedCatHTML = cats
@@ -17,7 +11,7 @@ function changeskin() {
     .map(cat => cat.name);
 console.log(selectedname)
 
-    catname.innerHTML = selectedname
+    namemenu.innerHTML = selectedname
 
     const selecttext = cats
     .filter(cat => cat.id === catskin)

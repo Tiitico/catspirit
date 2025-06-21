@@ -1,4 +1,3 @@
-const lifeboss= document.querySelector('#lifeboss')
 document.addEventListener('keydown', (event)=>{
 if(event.code === 'KeyZ'){
     if (powerr === false) {

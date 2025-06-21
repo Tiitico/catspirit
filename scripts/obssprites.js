@@ -105,3 +105,4 @@ const obsskin = [
         bottom: -84
     },
 ]
+const obss = [obs1,obs2];

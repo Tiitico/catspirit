@@ -86,12 +86,6 @@ const tutos = [
     }
 ]
 
-const nometela = document.querySelector('#nometela')
-const tutodesctext = document.querySelector('.tutodesctext')
-const tutoscreen = document.querySelector('#tutoscreen')
-const btntt = document.querySelector('#btntt')
-const btntt2 = document.querySelector('#btntt2')
-const esc = document.querySelector('#esc')
 let tutorialchoice = 1;
 
 function powertuto() {

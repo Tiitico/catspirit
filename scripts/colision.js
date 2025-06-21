@@ -1,9 +1,3 @@
-const obstacle = document.querySelector('#obstacle');
-const obstacle2 = document.querySelector('#obstacle2');
-const bonus = document.querySelector('#bonus');
-const balist1 = document.querySelector('#balist1')
-const balist2 = document.querySelector('#balist2')
-
 let colision = false;
 let colisionbonus = false;
 
